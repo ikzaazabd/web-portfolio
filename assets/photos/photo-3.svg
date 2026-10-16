@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#431407"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g3)"/>
+  <!-- Spatial Computing VisionOS test -->
+  <circle cx="300" cy="300" r="180" fill="none" stroke="#fdba74" stroke-width="2" stroke-dasharray="8 6"/>
+  <circle cx="300" cy="300" r="100" fill="#ea580c" opacity="0.4"/>
+  <text x="300" y="290" font-family="-apple-system, sans-serif" font-weight="800" font-size="28" fill="#ffffff" text-anchor="middle">VisionOS Prototype</text>
+  <text x="300" y="325" font-family="-apple-system, sans-serif" font-size="16" fill="#fed7aa" text-anchor="middle">Spatial UI / 3D Canvas testing</text>
+</svg>

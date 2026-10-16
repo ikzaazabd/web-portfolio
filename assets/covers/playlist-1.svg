@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="p1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#p1)"/>
+  <circle cx="150" cy="150" r="90" fill="none" stroke="#93c5fd" stroke-width="6"/>
+  <path d="M135 115 L 185 150 L 135 185 Z" fill="#ffffff"/>
+  <text x="150" y="270" font-family="-apple-system, sans-serif" font-weight="700" font-size="18" fill="#ffffff" text-anchor="middle">Deep Focus Coding</text>
+</svg>

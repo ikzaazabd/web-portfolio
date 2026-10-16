@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="memoji-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" fill="url(#memoji-bg)"/>
+  <!-- 3D Memoji style character -->
+  <g filter="url(#shadow)" transform="translate(50, 40)">
+    <!-- Body -->
+    <path d="M40 330 C 40 250, 90 220, 150 220 C 210 220, 260 250, 260 330 Z" fill="#18181b"/>
+    <!-- Neck -->
+    <rect x="125" y="180" width="50" height="50" rx="15" fill="#fed7aa"/>
+    <!-- Head 3D cute rounded -->
+    <ellipse cx="150" cy="130" rx="75" ry="85" fill="#ffedd5"/>
+    <!-- Hair 3D modern undercut -->
+    <path d="M75 110 C 70 30, 150 15, 220 35 C 235 45, 235 90, 230 120 C 210 80, 180 60, 140 65 C 100 70, 85 95, 75 110 Z" fill="#292524"/>
+    <!-- Big expressive Memoji Eyes -->
+    <ellipse cx="118" cy="125" rx="14" ry="18" fill="#1c1917"/>
+    <ellipse cx="182" cy="125" rx="14" ry="18" fill="#1c1917"/>
+    <circle cx="122" cy="120" r="5" fill="#ffffff"/>
+    <circle cx="186" cy="120" r="5" fill="#ffffff"/>
+    <!-- Cool modern round frame glasses -->
+    <circle cx="118" cy="125" r="28" fill="none" stroke="#f59e0b" stroke-width="5"/>
+    <circle cx="182" cy="125" r="28" fill="none" stroke="#f59e0b" stroke-width="5"/>
+    <line x1="146" y1="125" x2="154" y2="125" stroke="#f59e0b" stroke-width="5"/>
+    <!-- Cute smile with teeth -->
+    <path d="M125 165 Q 150 190 175 165 Z" fill="#ef4444"/>
+    <path d="M132 165 Q 150 175 168 165 Z" fill="#ffffff"/>
+    <!-- Blushing cheeks -->
+    <circle cx="95" cy="150" r="14" fill="#fb7185" opacity="0.4"/>
+    <circle cx="205" cy="150" r="14" fill="#fb7185" opacity="0.4"/>
+    <!-- Eyebrows -->
+    <path d="M98 95 Q 120 85 135 95" fill="none" stroke="#292524" stroke-width="5" stroke-linecap="round"/>
+    <path d="M165 95 Q 180 85 202 95" fill="none" stroke="#292524" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

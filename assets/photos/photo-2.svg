@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g2)"/>
+  <!-- Code editor mockup -->
+  <rect x="60" y="100" width="480" height="400" rx="16" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+  <circle cx="85" cy="125" r="6" fill="#ef4444"/>
+  <circle cx="105" cy="125" r="6" fill="#f59e0b"/>
+  <circle cx="125" cy="125" r="6" fill="#10b981"/>
+  <text x="160" y="130" font-family="monospace" font-size="12" fill="#71717a">JobSenseView.swift</text>
+  <!-- Swift Code Lines -->
+  <text x="90" y="180" font-family="monospace" font-size="14" fill="#f43f5e">import</text>
+  <text x="150" y="180" font-family="monospace" font-size="14" fill="#ffffff">SwiftUI</text>
+  <text x="90" y="210" font-family="monospace" font-size="14" fill="#f43f5e">import</text>
+  <text x="150" y="210" font-family="monospace" font-size="14" fill="#ffffff">CoreML</text>
+  <text x="90" y="250" font-family="monospace" font-size="14" fill="#38bdf8">struct</text>
+  <text x="150" y="250" font-family="monospace" font-size="14" fill="#a7f3d0">JobSenseView</text>
+  <text x="260" y="250" font-family="monospace" font-size="14" fill="#ffffff">: View {</text>
+  <text x="120" y="290" font-family="monospace" font-size="14" fill="#fb923c">@StateObject</text>
+  <text x="235" y="290" font-family="monospace" font-size="14" fill="#ffffff">var model = JobSensePredictor()</text>
+  <text x="120" y="330" font-family="monospace" font-size="14" fill="#38bdf8">var</text>
+  <text x="155" y="330" font-family="monospace" font-size="14" fill="#ffffff">body: some View {</text>
+  <text x="150" y="370" font-family="monospace" font-size="14" fill="#818cf8">SpatialRadarCanvas(data: model.trajectory)</text>
+  <text x="120" y="410" font-family="monospace" font-size="14" fill="#ffffff">}</text>
+  <text x="90" y="440" font-family="monospace" font-size="14" fill="#ffffff">}</text>
+</svg>

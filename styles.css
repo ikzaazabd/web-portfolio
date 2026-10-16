@@ -1,0 +1,590 @@
+/* ==========================================================
+   Design Tokens & Typography
+   Inspired by Apple HIG & samdickie.me
+   ========================================================== */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --tile: #f7f7f9;
+  --text: #111111;
+  --muted: #6b6b73;
+  --body-text: #4a4a52;
+  --line: #e7e7ec;
+  --outline: #d7d7dd;
+  --card: #ffffff;
+  --on-text: #ffffff;
+  --glass: rgba(255, 255, 255, 0.82);
+  --glass-active: #eeeef1;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --hover-ring: rgba(0, 0, 0, 0.06);
+  --accent: #0071e3;
+  
+  /* Apple System Colors */
+  --apple-blue: #0071e3;
+  --apple-orange: #ff9500;
+  --apple-teal: #30b0c7;
+  --apple-green: #34c759;
+  --apple-purple: #af52de;
+  --apple-pink: #ff2d55;
+  --apple-red: #ff3b30;
+  
+  --radius: 32px;
+  --tile-pad: 32px;
+  --gap: 16px;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif;
+  --font-mono: "SF Mono", Menlo, Consolas, monospace;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e0e10;
+  --tile: #1a1a1d;
+  --text: #f2f2f4;
+  --muted: #9d9da6;
+  --body-text: #c6c6ce;
+  --line: #2e2e33;
+  --outline: #3a3a41;
+  --card: #26262b;
+  --on-text: #0e0e10;
+  --glass: rgba(34, 34, 38, 0.85);
+  --glass-active: #34343a;
+  --shadow: rgba(0, 0, 0, 0.45);
+  --hover-ring: rgba(255, 255, 255, 0.12);
+  --accent: #2997ff;
+}
+
+/* View transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.35s;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================
+   Floating Navigation Pill
+   ========================================================== */
+.nav {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 12px 30px -8px var(--shadow);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.2s, background-color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.nav-link.is-active {
+  background: var(--glass-active);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--muted);
+  transition: color 0.2s, background-color 0.2s;
+  margin-right: 2px;
+}
+
+.nav-search:hover {
+  color: var(--text);
+  background: var(--glass-active);
+}
+
+.nav-search svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+}
+
+/* ==========================================================
+   Theme Switcher Button
+   ========================================================== */
+.theme-toggle {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px -4px var(--shadow);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.3s, border-color 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: rotate(-15deg) scale(1.05);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 19px;
+  height: 19px;
+}
+
+.icon-sun,
+:root[data-theme="dark"] .icon-moon {
+  display: none;
+}
+
+:root[data-theme="dark"] .icon-sun {
+  display: block;
+}
+
+/* Audio Sound Effects Button */
+.sound-toggle {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px -4px var(--shadow);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.3s, border-color 0.3s;
+}
+
+.sound-toggle:hover {
+  transform: scale(1.08);
+}
+
+.sound-toggle svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sound-toggle.is-muted .sound-on,
+.sound-toggle:not(.is-muted) .sound-off {
+  display: none;
+}
+
+/* ==========================================================
+   Page & Bento Grid Container
+   ========================================================== */
+.page {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 105px 20px 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: clamp(260px, 22vw, 320px);
+  grid-auto-flow: dense;
+  gap: var(--gap);
+  position: relative;
+}
+
+/* Base Tile */
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--tile-pad);
+  background: var(--tile);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+}
+
+.tile:hover {
+  box-shadow: 0 16px 36px -12px var(--shadow);
+}
+
+a.tile {
+  cursor: pointer;
+}
+
+a.tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px var(--shadow);
+}
+
+/* Common Widget Arrow */
+.arrow {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid var(--outline);
+  border-radius: 50%;
+  font-size: 15px;
+  color: var(--muted);
+  background: var(--card);
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+  z-index: 2;
+}
+
+a.tile:hover .arrow,
+.tile:hover .arrow {
+  background: var(--text);
+  color: var(--on-text);
+  border-color: var(--text);
+  transform: scale(1.05);
+}
+
+/* App Header Row */
+.tile-app {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--muted);
+}
+
+.tile-app-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.tile-heading {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+.small {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.muted {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 48px 0 24px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: clamp(240px, 32vw, 320px);
+  }
+  .tile--intro {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 95px 14px 40px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .tile {
+    min-height: 260px;
+  }
+  .tile--intro,
+  .tile--newsletter,
+  .tile--freeform,
+  .tile--switcher,
+  .tile--spotify,
+  .tile--books {
+    grid-column: span 1 !important;
+  }
+  .nav {
+    top: auto;
+    bottom: 20px;
+    max-width: 90vw;
+    overflow-x: auto;
+  }
+  .theme-toggle {
+    top: 16px;
+    left: 16px;
+  }
+  .sound-toggle {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+/* ==========================================================
+   macOS iMessage Notification Toast
+   ========================================================== */
+.im-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 200;
+  width: 340px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 16px 36px -6px var(--shadow);
+  padding: 14px 16px;
+  transform: translateX(380px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+  opacity: 0;
+}
+
+.im-toast[hidden] {
+  display: none;
+}
+
+.im-toast.is-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.im-toast.is-out {
+  transform: translateX(380px);
+  opacity: 0;
+}
+
+.im-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.im-sender {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.im-avatar {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+
+.im-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.im-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #34c759;
+  border: 2px solid #fff;
+}
+
+.im-name {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.im-time {
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.im-close {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.im-close:hover {
+  background: var(--glass-active);
+  color: var(--text);
+}
+
+.im-body {
+  font-size: 13px;
+  color: var(--body-text);
+  line-height: 1.45;
+}
+
+.im-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.im-reply-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--apple-blue);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.im-reply-btn:hover {
+  background: rgba(0, 113, 227, 0.1);
+}
+
+.im-compose {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.im-input {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: var(--text);
+  outline: none;
+}
+
+.im-input:focus {
+  border-color: var(--apple-blue);
+}
+
+.im-send-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--apple-blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}

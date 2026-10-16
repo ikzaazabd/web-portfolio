@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 480">
+  <defs>
+    <linearGradient id="b1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="480" rx="8" fill="url(#b1)"/>
+  <rect x="0" y="0" width="24" height="480" fill="#0f172a" opacity="0.4"/>
+  <text x="45" y="100" font-family="-apple-system, sans-serif" font-weight="800" font-size="28" fill="#38bdf8">Apple HIG</text>
+  <text x="45" y="140" font-family="-apple-system, sans-serif" font-weight="600" font-size="18" fill="#ffffff">Human Interface</text>
+  <text x="45" y="165" font-family="-apple-system, sans-serif" font-weight="600" font-size="18" fill="#ffffff">Guidelines</text>
+  <text x="45" y="420" font-family="-apple-system, sans-serif" font-size="14" fill="#94a3b8">Apple Design Team</text>
+</svg>

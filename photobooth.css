@@ -1,0 +1,230 @@
+/* ==========================================================
+   macOS Photo Booth Dialog & Webcam Styles
+   ========================================================== */
+.pb-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 640px;
+  background: #1c1c1e;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+}
+
+.pb-window[open] {
+  display: flex;
+}
+
+.pb-window::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+/* Titlebar */
+.pb-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: #2c2c2e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pb-lights {
+  display: flex;
+  gap: 8px;
+}
+
+.pb-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.pb-light--close { background: #ff5f56; }
+.pb-light--min { background: #ffbd2e; }
+.pb-light--max { background: #27c93f; }
+
+.pb-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #a1a1a6;
+}
+
+/* Stage */
+.pb-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pb-video {
+  display: none;
+}
+
+.pb-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Flash effect */
+.pb-flash {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.pb-flash.is-flashing {
+  animation: flash-white 0.4s ease-out;
+}
+
+@keyframes flash-white {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Countdown */
+.pb-countdown {
+  position: absolute;
+  font-size: 72px;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+  z-index: 15;
+  pointer-events: none;
+  animation: count-pop 0.9s infinite;
+}
+
+@keyframes count-pop {
+  0% { transform: scale(1.4); opacity: 0; }
+  50% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0; }
+}
+
+/* Fallback message */
+.pb-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background: #1c1c1e;
+  gap: 12px;
+  z-index: 10;
+}
+
+.pb-message-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pb-message-body {
+  font-size: 13px;
+  color: #a1a1a6;
+  max-width: 320px;
+}
+
+.pb-start-cam-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--apple-blue);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Toolbar */
+.pb-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #2c2c2e;
+}
+
+.pb-effects-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #3a3a3c;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.pb-effects-btn:hover {
+  background: #48484a;
+}
+
+.pb-shutter {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ff3b30;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 59, 48, 0.4);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 0.15s;
+}
+
+.pb-shutter:hover {
+  transform: scale(1.08);
+}
+
+.pb-shutter:active {
+  transform: scale(0.95);
+}
+
+/* Photo tray */
+.pb-tray {
+  padding: 12px 18px;
+  background: #1c1c1e;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  min-height: 72px;
+}
+
+.pb-tray-empty {
+  font-size: 12px;
+  color: #636366;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.pb-thumb {
+  width: 70px;
+  height: 52px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.pb-thumb:hover {
+  transform: scale(1.08);
+}

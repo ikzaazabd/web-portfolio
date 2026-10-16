@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="photo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#photo-grad)"/>
+  <circle cx="200" cy="180" r="140" fill="url(#glow)"/>
+  <!-- Portrait Silhouette with realistic Apple Academy vibe -->
+  <g transform="translate(40, 20)">
+    <!-- Shoulders / Jacket -->
+    <path d="M40 380 C 40 280, 90 250, 160 250 C 230 250, 280 280, 280 380 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.4"/>
+    <path d="M120 250 L 160 300 L 200 250 Z" fill="#334155"/>
+    <!-- Neck -->
+    <rect x="140" y="200" width="40" height="60" rx="10" fill="#fbcfe8"/>
+    <!-- Head -->
+    <ellipse cx="160" cy="150" rx="58" ry="72" fill="#fce7f3"/>
+    <!-- Hair Modern Apple Style -->
+    <path d="M100 130 C 95 70, 150 40, 210 55 C 230 60, 235 90, 230 130 C 215 110, 195 95, 160 95 C 130 95, 110 110, 100 130 Z" fill="#18181b"/>
+    <!-- Glasses -->
+    <rect x="115" y="130" width="40" height="30" rx="8" fill="none" stroke="#0ea5e9" stroke-width="4"/>
+    <rect x="165" y="130" width="40" height="30" rx="8" fill="none" stroke="#0ea5e9" stroke-width="4"/>
+    <line x1="155" y1="145" x2="165" y2="145" stroke="#0ea5e9" stroke-width="4"/>
+    <!-- Smile & details -->
+    <path d="M145 185 Q 160 198 175 185" fill="none" stroke="#be185d" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="135" cy="145" r="4" fill="#0f172a"/>
+    <circle cx="185" cy="145" r="4" fill="#0f172a"/>
+    <!-- Apple Developer Academy Badge -->
+    <rect x="135" y="320" width="50" height="30" rx="6" fill="#0284c7"/>
+    <text x="160" y="338" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle"> ADA</text>
+  </g>
+</svg>

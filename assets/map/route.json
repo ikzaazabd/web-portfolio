@@ -1,0 +1,56 @@
+{
+  "width": 800,
+  "height": 800,
+  "points": [
+    [
+      390,
+      470
+    ],
+    [
+      430,
+      470
+    ],
+    [
+      510,
+      450
+    ],
+    [
+      515,
+      300
+    ],
+    [
+      430,
+      290
+    ],
+    [
+      350,
+      290
+    ],
+    [
+      250,
+      310
+    ],
+    [
+      250,
+      460
+    ],
+    [
+      330,
+      470
+    ],
+    [
+      390,
+      470
+    ]
+  ],
+  "streets": [
+    "Academy Lab",
+    "Design Studio",
+    "Innovation Avenue",
+    "Spatial Hub",
+    "Coffee Commons",
+    "Swift Workshop",
+    "Hardware Bar",
+    "Academy Lab"
+  ]
+}

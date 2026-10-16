@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="p2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#p2)"/>
+  <circle cx="150" cy="150" r="75" fill="#ffffff" opacity="0.2"/>
+  <text x="150" y="165" font-family="-apple-system, sans-serif" font-weight="800" font-size="44" fill="#ffffff" text-anchor="middle">🎧</text>
+  <text x="150" y="270" font-family="-apple-system, sans-serif" font-weight="700" font-size="18" fill="#ffffff" text-anchor="middle">Apple Lo-Fi Chill</text>
+</svg>

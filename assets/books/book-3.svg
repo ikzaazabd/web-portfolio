@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 480">
+  <defs>
+    <linearGradient id="b3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="480" rx="8" fill="url(#b3)"/>
+  <rect x="0" y="0" width="24" height="480" fill="#000000" opacity="0.3"/>
+  <text x="45" y="100" font-family="-apple-system, sans-serif" font-weight="800" font-size="24" fill="#6ee7b7">Designing</text>
+  <text x="45" y="130" font-family="-apple-system, sans-serif" font-weight="800" font-size="24" fill="#ffffff">Data-Intensive</text>
+  <text x="45" y="160" font-family="-apple-system, sans-serif" font-weight="800" font-size="24" fill="#ffffff">Applications</text>
+  <text x="45" y="420" font-family="-apple-system, sans-serif" font-size="14" fill="#a7f3d0">Martin Kleppmann</text>
+</svg>
