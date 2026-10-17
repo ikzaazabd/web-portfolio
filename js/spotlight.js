@@ -2,7 +2,7 @@
 // macOS Spotlight Search Overlay Logic
 // ==========================================================
 
-import { playClick, playChime } from './audio.js';
+import { playClick, playChime } from './audio.js?v=20261017-track';
 
 export function initSpotlight() {
   const overlay = document.querySelector('.sl-overlay');
@@ -25,8 +25,7 @@ export function initSpotlight() {
       searchIndex = [
         { t: "JobSense 2027", s: "Flagship Swift & CoreML Project", g: "Projects", u: "#project-jobsense" },
         { t: "Apple Developer Academy", s: "Learning Lab & Experience", g: "Projects", u: "#project-academy" },
-        { t: "Switch Theme", s: "Toggle Dark / Light appearance", g: "Actions", u: "action:theme" },
-        { t: "Ask Siri", s: "Transform into Memoji", g: "Actions", u: "action:memoji" }
+        { t: "Switch Theme", s: "Toggle Dark / Light appearance", g: "Actions", u: "action:theme" }
       ];
     });
 
@@ -167,8 +166,6 @@ export function initSpotlight() {
       const action = item.u.replace('action:', '');
       if (action === 'theme') {
         document.querySelector('.theme-toggle')?.click();
-      } else if (action === 'memoji') {
-        document.querySelector('.siri-button')?.click();
       } else if (action === 'photobooth') {
         document.querySelector('.tile--photobooth')?.click();
       } else if (action === 'officehours') {

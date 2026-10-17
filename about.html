@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Ikzaaz | Product Manager & Builder</title>
+  <meta name="description" content="A little more about the person behind the pixels — aspiring Product Manager, and curious builder.">
+  <link rel="canonical" href="https://ikzaazabd.site/about.html">
+
+  <!-- OpenGraph -->
+  <meta property="og:site_name" content="Ikzaaz Bakhtar Abdurrahman">
+  <meta property="og:title" content="About Ikzaaz | Product Manager & Builder">
+  <meta property="og:description" content="A little more about the person behind the pixels.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ikzaazabd.site/about.html">
+
+  <script src="./js/theme-init.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="notes-body">
+
+  <!-- Floating Navigation Pill -->
+  <nav class="nav" aria-label="Main Navigation">
+    <a href="./index.html" class="nav-link">Home</a>
+    <a href="./about.html" class="nav-link is-active" aria-current="page">About</a>
+    <a href="./projects.html" class="nav-link">Projects</a>
+    <a href="./writings.html" class="nav-link">Writings</a>
+  </nav>
+
+  <!-- Main Notes Window Container -->
+  <main class="notes-page">
+    <section class="notes-window" aria-label="About Ikzaaz, presented as an Apple Notes window">
+
+      <!-- Window Titlebar & macOS Controls -->
+      <header class="notes-titlebar">
+        <div class="window-lights" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="notes-titlebar-actions">
+          <!-- macOS Sidebar / Navigator Toggle Icon -->
+          <button class="notes-tool notes-sidebar-toggle" type="button" aria-label="Hide Notes sidebars" aria-expanded="true" title="Toggle Sidebar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="4.5" width="17" height="15" rx="2.5"></rect>
+              <line x1="9" y1="4.5" x2="9" y2="19.5"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Plain 'Notes' Title without app icon logo -->
+        <strong class="notes-app-title">Notes</strong>
+
+        <div class="notes-titlebar-actions notes-titlebar-actions--right">
+          <!-- macOS Notes Share / Action Icon -->
+          <a class="notes-tool" href="mailto:ikzaazabd@gmail.com?subject=Hello%20Ikzaaz" aria-label="Email Ikzaaz" title="Share via Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"></path>
+              <polyline points="16 6 12 2 8 6"></polyline>
+              <line x1="12" y1="2" x2="12" y2="15"></line>
+            </svg>
+          </a>
+          <!-- macOS Notes Compose / New Note Icon -->
+          <button class="notes-tool notes-compose" type="button" aria-label="Create a temporary note" title="New Note">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- 3-Column Workspace -->
+      <div class="notes-workspace">
+
+        <!-- Column 1: Apple Notes Sidebar (Folders) -->
+        <aside class="notes-folders" aria-label="Notes folders">
+          <p class="notes-sidebar-label">iCloud</p>
+          <div class="folder-row is-selected">
+            <span class="folder-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3.5 6.5h6l1.7 2H20.5v9.8a1.7 1.7 0 0 1-1.7 1.7H5.2a1.7 1.7 0 0 1-1.7-1.7z"/></svg>
+            </span>
+            <span>About Ikzaaz</span>
+            <span class="folder-count">5</span>
+          </div>
+
+          <p class="notes-sidebar-label notes-sidebar-label--spaced">On My Mac</p>
+          <div class="folder-row">
+            <span class="folder-icon folder-icon--muted" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3.5 6.5h6l1.7 2H20.5v9.8a1.7 1.7 0 0 1-1.7 1.7H5.2a1.7 1.7 0 0 1-1.7-1.7z"/></svg>
+            </span>
+            <span>Quick Notes</span>
+          </div>
+
+          <div class="notes-account">
+            <img src="./assets/images/ikzaaz-portrait.jpeg" width="32" height="32" alt="Ikzaaz">
+            <span>
+              <strong>Ikzaaz Abdurrahman</strong>
+              <small>5 notes</small>
+            </span>
+          </div>
+        </aside>
+
+        <!-- Column 2: Note List (Navigation Items) -->
+        <nav class="notes-list" aria-label="Notes in Folder">
+          <div class="notes-list-heading">
+            <h2 class="notes-list-title">About Ikzaaz</h2>
+            <span class="note-count">5 notes</span>
+          </div>
+
+          <!-- Dynamic Draft Note Row (Shown when Write Note is clicked) -->
+          <button class="note-row note-row--draft" type="button" hidden>
+            <strong>New Note</strong>
+            <span>Start typing…</span>
+          </button>
+
+          <!-- Note 1: About -->
+          <a class="note-row is-selected" href="#about">
+            <strong>About</strong>
+            <span>A little more about the person behind the pixels.</span>
+          </a>
+
+          <!-- Note 2: Background -->
+          <a class="note-row" href="#background">
+            <strong>Background</strong>
+            <span>From computer science to product thinking.</span>
+          </a>
+
+          <!-- Note 3: Interests -->
+          <a class="note-row" href="#interests">
+            <strong>Interests</strong>
+            <span>Products, people, creativity, and rabbit holes.</span>
+          </a>
+
+          <!-- Note 4: Current Role -->
+          <a class="note-row" href="#current-role">
+            <strong>Current Role</strong>
+            <span>Learning, building, and figuring things out.</span>
+          </a>
+
+          <!-- Note 5: Skills -->
+          <a class="note-row" href="#skills">
+            <strong>Skills</strong>
+            <span>A little bit of everything, connected by curiosity.</span>
+          </a>
+        </nav>
+
+        <!-- Column 3: Note Editor / Content Pane (Internal Scrollable) -->
+        <article class="note-editor" tabindex="0">
+          <div class="note-document" id="about-document">
+
+            <!-- 01 — About -->
+            <section class="note-section" id="about">
+              <div class="note-profile">
+                <!-- Rounded rectangle avatar as requested -->
+                <img src="./assets/images/ikzaaz-portrait.jpeg" alt="Ikzaaz Bakhtar Abdurrahman">
+                <div>
+                  <p class="note-eyebrow">PRODUCT MANAGER &amp; MAKER</p>
+                  <h1>Hello, I'm Ikzaaz.</h1>
+                </div>
+              </div>
+
+              <h4>I'm a Computer Science graduate from Universitas Brawijaya, currently based in Batam, Indonesia, and figuring out my way into the world of Product Management.</h4>
+              <p>I've always been curious about how things work, but even more curious about why people need them in the first place. That curiosity has taken me through technology, design, product operations, content creation, and quite a few leadership roles along the way.</p>
+              <p>I like connecting the dots between people, problems, and possibilities. Whether it's building digital products, bringing ideas to life, or getting people together to make things happen, I'm happiest when there's something meaningful to figure out.</p>
+              <p>Outside of work, you'll probably find me exploring new technology, experimenting with AI, or going down another internet rabbit hole. This website is a pretty good example of all three.</p>
+            </section>
+
+            <!-- 02 — Background -->
+            <section class="note-section" id="background">
+              <h2>Background</h2>
+              <p>I started out studying Computer Science at Universitas Brawijaya, thinking my future would revolve around writing code. Turns out, I was just as interested in the people using the technology as the technology itself.</p>
+              <p>University became my playground for trying different things. I led student initiatives, managed events, worked in social media, taught mobile app development, and somehow found myself holding a microphone at international competitions.</p>
+              <p>Professionally, I've explored content creation at Digimarly and product operations at dibimbing.id, where I helped manage learning programs, coordinate teams, and improve experiences based on user feedback.</p>
+              <p>Along the way, I discovered that understanding the problem, aligning people, and figuring out what to build excited me more than jumping straight into development.</p>
+              <p>That's what eventually drew me toward Product Management. Not exactly a straight line, but looking back, the dots connect.</p>
+            </section>
+
+            <!-- 03 — Interests -->
+            <section class="note-section" id="interests">
+              <h2>Interests</h2>
+              <p>I've never been particularly good at sticking to just one thing. My interests tend to overlap, evolve, and occasionally turn into side projects.</p>
+              <p>Right now, I'm particularly into:</p>
+
+              <div class="interest-tags">
+                <span>Product Management</span>
+                <span>UI/UX Design</span>
+                <span>AI &amp; Emerging Tech</span>
+                <span>Vibe Coding</span>
+                <span>Digital Products</span>
+                <span>Content &amp; Storytelling</span>
+              </div>
+
+              <p>I enjoy exploring how technology changes the way we work, create, and interact. Lately, that's meant experimenting with AI tools like GPT-6 and Gemini Argon to turn ideas into something tangible.</p>
+              <p>I'm also a big believer that good products start with good conversations. So naturally, I enjoy meeting new people, exchanging perspectives, and learning from experiences outside my usual bubble.</p>
+              <p>And when curiosity gets the better of me? Well, sometimes it turns into an entire website.</p>
+            </section>
+
+            <!-- 04 — Current Role -->
+            <section class="note-section" id="current-role">
+              <h2>Current Role</h2>
+              <p>I'm currently a Junior Developer (Learner) at <a href="https://developeracademy.infinitelearning.id/" target="_blank" rel="noopener noreferrer">Apple Developer Academy @ Infinite Learning</a> in Batam, where I work with multidisciplinary teams to explore problems, challenge assumptions, and build user-centered digital product prototypes.</p>
+              <p>Through Apple's Challenge-Based Learning approach, I've been involved in the product development process, from discovering user needs and conducting research to shaping solutions, prototyping, and validating ideas.</p>
+              <p>Before joining the Academy, I worked in B2C Product Operations at <a href="https://dibimbing.id/" target="_blank" rel="noopener noreferrer">dibimbing.id</a>, helping manage four bootcamp programs serving over 170 students while coordinating with Class Managers, mentors, and cross-functional teams.</p>
+              <p>That experience taught me something valuable: building a product is one thing, but making sure it actually works for the people using it is another.</p>
+              <p>These days, I'm particularly interested in opportunities where I can bring together product thinking, user experience, technology, and business strategy.</p>
+            </section>
+
+            <!-- 05 — Skills -->
+            <section class="note-section" id="skills">
+              <h2>Skills</h2>
+              <p>Rather than being an expert at everything, I like having enough range to understand different perspectives, connect ideas, and work effectively across disciplines.</p>
+              <p>Here's what I've picked up along the way.</p>
+
+              <ul class="notes-checklist">
+                <li><span>✓</span> Product management</li>
+                <li><span>✓</span> Project management</li>
+                <li><span>✓</span> Idea validation</li>
+                <li><span>✓</span> UI/UX Design</li>
+                <li><span>✓</span> Building with AI</li>
+                <li><span>✓</span> Web design</li>
+                <li><span>✓</span> Content &amp; Social Media Management</li>
+              </ul>
+            </section>
+
+            <!-- Footer Section -->
+            <div class="note-footer">
+              <span class="sparkle">✦</span>
+              <p>Got an interesting problem, a product idea, or just something worth talking about?</p>
+              <a href="mailto:ikzaazabd@gmail.com" class="note-connect-link">Let's connect →</a>
+            </div>
+
+          </div>
+
+          <!-- Interactive Temporary Draft Note Editor (Shown when Write Note is clicked) -->
+          <section class="note-draft" aria-label="Temporary note editor" hidden>
+            <div class="draft-meta">
+              <button class="draft-back" type="button">
+                <span aria-hidden="true">‹</span> About Ikzaaz
+              </button>
+              <span>Temporary note · Not saved</span>
+            </div>
+            <input class="draft-title" id="temporary-note-title" name="temporary-note-title" type="text" aria-label="Note title" placeholder="New Note" autocomplete="off" spellcheck="true">
+            <div class="draft-body" contenteditable="true" role="textbox" aria-label="Note body" aria-multiline="true" data-placeholder="Start typing…" spellcheck="true"></div>
+            <p class="draft-disclaimer">This note only lives in this browser tab and disappears when the page is refreshed.</p>
+          </section>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 · Ikzaaz Bakhtar Abdurrahman</footer>
+
+  <!-- Scripts -->
+  <script type="module" src="./js/about-page.js"></script>
+</body>
+</html>

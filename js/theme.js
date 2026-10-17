@@ -2,7 +2,7 @@
 // Theme Management (Light / Dark Appearance)
 // ==========================================================
 
-import { playClick } from './audio.js';
+import { playClick } from './audio.js?v=20261017-track';
 
 export function initTheme() {
   const toggleBtn = document.querySelector('.theme-toggle');

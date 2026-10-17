@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e0e10"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0071e3"/>
+      <stop offset="100%" style="stop-color:#6e40c9"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative bento grid shapes -->
+  <rect x="820" y="60" width="280" height="180" rx="24" fill="#1a1a1d" stroke="#2e2e33" stroke-width="1" opacity="0.8"/>
+  <rect x="820" y="260" width="130" height="130" rx="24" fill="#1a1a1d" stroke="#2e2e33" stroke-width="1" opacity="0.8"/>
+  <rect x="970" y="260" width="130" height="130" rx="24" fill="#1a1a1d" stroke="#2e2e33" stroke-width="1" opacity="0.8"/>
+  <rect x="820" y="410" width="280" height="160" rx="24" fill="#1a1a1d" stroke="#2e2e33" stroke-width="1" opacity="0.8"/>
+
+  <!-- Accent dots -->
+  <circle cx="960" cy="110" r="36" fill="url(#accent)" filter="url(#glow)" opacity="0.9"/>
+  <text x="960" y="122" font-family="system-ui" font-size="32" fill="white" text-anchor="middle" font-weight="700">IB</text>
+
+  <!-- Small colored dots -->
+  <circle cx="848" cy="290" r="14" fill="#0071e3" opacity="0.9"/>
+  <circle cx="1000" cy="290" r="14" fill="#34c759" opacity="0.9"/>
+  <circle cx="848" cy="440" r="10" fill="#ff9500" opacity="0.7"/>
+  <circle cx="1080" cy="440" r="10" fill="#af52de" opacity="0.7"/>
+
+  <!-- Main name text -->
+  <text x="100" y="240" font-family="-apple-system, system-ui, sans-serif" font-size="72" font-weight="700" fill="white" letter-spacing="-2" opacity="0.95">Ikzaaz Bakhtar</text>
+  <text x="100" y="320" font-family="-apple-system, system-ui, sans-serif" font-size="72" font-weight="700" fill="#9d9da6" letter-spacing="-2">Abdurrahman</text>
+
+  <!-- Role pill -->
+  <rect x="100" y="360" width="420" height="50" rx="25" fill="#0071e3" opacity="0.15" stroke="#0071e3" stroke-width="1.5"/>
+  <text x="310" y="391" font-family="-apple-system, system-ui, sans-serif" font-size="20" fill="#2997ff" text-anchor="middle" font-weight="600">Product Operations · iOS Developer</text>
+
+  <!-- Domain -->
+  <text x="100" y="470" font-family="SF Mono, Menlo, monospace" font-size="22" fill="#9d9da6" letter-spacing="1">ikzaazabd.site</text>
+
+  <!-- Tags -->
+  <rect x="100" y="510" width="115" height="34" rx="8" fill="#26262b" stroke="#3a3a41" stroke-width="1"/>
+  <text x="158" y="532" font-family="-apple-system, system-ui, sans-serif" font-size="14" fill="#c6c6ce" text-anchor="middle" font-weight="500">Swift / SwiftUI</text>
+
+  <rect x="230" y="510" width="90" height="34" rx="8" fill="#26262b" stroke="#3a3a41" stroke-width="1"/>
+  <text x="275" y="532" font-family="-apple-system, system-ui, sans-serif" font-size="14" fill="#c6c6ce" text-anchor="middle" font-weight="500">UX Research</text>
+
+  <rect x="335" y="510" width="130" height="34" rx="8" fill="#26262b" stroke="#3a3a41" stroke-width="1"/>
+  <text x="400" y="532" font-family="-apple-system, system-ui, sans-serif" font-size="14" fill="#c6c6ce" text-anchor="middle" font-weight="500">Apple CBL Framework</text>
+
+  <!-- Apple Academy badge -->
+  <text x="100" y="590" font-family="-apple-system, system-ui, sans-serif" font-size="16" fill="#6b6b73">Apple Developer Academy @ Infinite Learning Batam · Universitas Brawijaya GPA 3.70</text>
+</svg>

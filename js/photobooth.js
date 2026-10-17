@@ -2,7 +2,7 @@
 // macOS Photo Booth Window & Camera Effects
 // ==========================================================
 
-import { playShutter, playClick } from './audio.js';
+import { playShutter, playClick } from './audio.js?v=20261017-track';
 
 export function initPhotoBooth() {
   const launchBtn = document.querySelector('.tile--photobooth');
@@ -17,23 +17,47 @@ export function initPhotoBooth() {
   const countdown = win.querySelector('.pb-countdown');
   const shutterBtn = win.querySelector('.pb-shutter');
   const effectsBtn = win.querySelector('.pb-effects-btn');
+  const effectsGrid = win.querySelector('.pb-effects-grid');
+  const previewCanvases = [];
+  let captureTimer;
   const tray = win.querySelector('.pb-tray');
   const messageBox = win.querySelector('.pb-message');
   const startCamBtn = win.querySelector('.pb-start-cam-btn');
 
   let stream = null;
+  let hasPreview = false;
+  let cameraRequest = 0;
   let animId = null;
-  let currentEffect = 0;
-  const effects = ['Normal', 'Thermal', 'X-Ray', 'Noir', 'Pop-Art'];
+  let currentEffect = 4;
+  const effects = ['Thermal', 'X-Ray', 'Noir', 'Sepia', 'Normal', 'Pop-Art', 'Cool', 'Warm', 'Mono'];
 
+  effects.forEach((name, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('aria-label', name);
+    const preview = document.createElement('canvas');
+    preview.width = 160; preview.height = 120;
+    const label = document.createElement('span'); label.textContent = name;
+    button.append(preview, label); effectsGrid.append(button); previewCanvases.push(preview);
+    button.addEventListener('click', () => { currentEffect = index; setEffects(false); });
+  });
+  function setEffects(open) {
+    effectsGrid.hidden = !open;
+    effectsBtn.setAttribute('aria-expanded', String(open));
+    shutterBtn.disabled = open || !hasPreview;
+    win.classList.toggle('pb-choosing-effects', open);
+  }
   // Open window
   if (launchBtn) {
     launchBtn.addEventListener('click', () => {
       playClick();
       win.showModal();
-      startCamera();
+      messageBox.style.display = 'flex';
+      shutterBtn.disabled = true;
     });
   }
+
+  startCamBtn?.addEventListener('click', startCamera);
 
   // Close window
   if (closeBtn) {
@@ -48,23 +72,42 @@ export function initPhotoBooth() {
   });
 
   async function startCamera() {
+    const request = ++cameraRequest;
+    startCamBtn.disabled = true;
+    startCamBtn.textContent = 'Connecting…';
     try {
-      stream = await navigator.mediaDevices.getUserMedia({
+      const acquired = await navigator.mediaDevices.getUserMedia({
         video: { width: 640, height: 480 },
         audio: false
       });
+      if (request !== cameraRequest || !win.open) { acquired.getTracks().forEach(track => track.stop()); return; }
+      stream = acquired;
       video.srcObject = stream;
       await video.play();
       if (messageBox) messageBox.style.display = 'none';
+      hasPreview = true;
+      shutterBtn.disabled = !effectsGrid.hidden;
       drawLoop();
     } catch (err) {
+      if (request !== cameraRequest || !win.open) return;
       console.warn('Camera access denied or unavailable. Using virtual camera preview.');
       if (messageBox) messageBox.style.display = 'none';
+      hasPreview = true;
+      shutterBtn.disabled = !effectsGrid.hidden;
       drawVirtualCamera();
     }
   }
 
   function stopCamera() {
+    cameraRequest++;
+    hasPreview = false;
+    startCamBtn.disabled = false;
+    startCamBtn.textContent = 'Start Camera';
+    clearInterval(captureTimer);
+    effectsBtn.disabled = false;
+    countdown.hidden = true;
+    shutterBtn.disabled = false;
+    setEffects(false);
     if (stream) {
       stream.getTracks().forEach(track => track.stop());
       stream = null;
@@ -92,6 +135,15 @@ export function initPhotoBooth() {
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     ctx.restore();
 
+    if (!effectsGrid.hidden) {
+      const selected = currentEffect;
+      const base = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      previewCanvases.forEach((preview, index) => {
+        ctx.putImageData(base, 0, 0); currentEffect = index; applyFilter();
+        preview.getContext('2d').drawImage(canvas, 0, 0, 160, 120);
+      });
+      ctx.putImageData(base, 0, 0); currentEffect = selected;
+    }
     applyFilter();
     animId = requestAnimationFrame(drawLoop);
   }
@@ -129,6 +181,15 @@ export function initPhotoBooth() {
     ctx.textAlign = 'center';
     ctx.fillText(' Photo Booth Live Studio', canvas.width / 2, 60);
 
+    if (!effectsGrid.hidden) {
+      const selected = currentEffect;
+      const base = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      previewCanvases.forEach((preview, index) => {
+        ctx.putImageData(base, 0, 0); currentEffect = index; applyFilter();
+        preview.getContext('2d').drawImage(canvas, 0, 0, 160, 120);
+      });
+      ctx.putImageData(base, 0, 0); currentEffect = selected;
+    }
     applyFilter();
     animId = requestAnimationFrame(drawVirtualCamera);
   }
@@ -157,6 +218,16 @@ export function initPhotoBooth() {
         data[i] = gray;
         data[i + 1] = gray;
         data[i + 2] = gray;
+      } else if (fx === 'Sepia') {
+        data[i] = r * .393 + g * .769 + b * .189;
+        data[i + 1] = r * .349 + g * .686 + b * .168;
+        data[i + 2] = r * .272 + g * .534 + b * .131;
+      } else if (fx === 'Cool') {
+        data[i] = r * .8; data[i + 2] = b * 1.2 + 15;
+      } else if (fx === 'Warm') {
+        data[i] = r * 1.2 + 15; data[i + 2] = b * .8;
+      } else if (fx === 'Mono') {
+        data[i] = data[i + 1] = data[i + 2] = brightness;
       } else if (fx === 'Pop-Art') {
         data[i] = r > 128 ? 255 : 40;
         data[i + 1] = g > 128 ? 60 : 200;
@@ -170,26 +241,29 @@ export function initPhotoBooth() {
   if (effectsBtn) {
     effectsBtn.addEventListener('click', () => {
       playClick();
-      currentEffect = (currentEffect + 1) % effects.length;
-      effectsBtn.textContent = `Effect: ${effects[currentEffect]}`;
+      setEffects(effectsGrid.hidden);
     });
   }
 
   // Shutter button with Countdown
   if (shutterBtn) {
     shutterBtn.addEventListener('click', async () => {
+      shutterBtn.disabled = true;
+      effectsBtn.disabled = true;
       let count = 3;
       countdown.hidden = false;
       countdown.textContent = count;
       playClick();
 
-      const timer = setInterval(() => {
+      captureTimer = setInterval(() => {
         count--;
         if (count > 0) {
           countdown.textContent = count;
           playClick();
         } else {
-          clearInterval(timer);
+          clearInterval(captureTimer);
+          shutterBtn.disabled = false;
+          effectsBtn.disabled = false;
           countdown.hidden = true;
           snapPhoto();
         }

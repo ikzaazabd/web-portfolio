@@ -3,7 +3,7 @@
 // Real Web Audio Lofi Ambient Synthesizer
 // ==========================================================
 
-import { isSoundEnabled } from './audio.js';
+import { isSoundEnabled } from './audio.js?v=20261017-track';
 
 let audioCtx = null;
 let isPlaying = false;

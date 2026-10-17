@@ -2,7 +2,7 @@
 // Rearrange & Wiggle Mode (iOS Home Screen Jiggle)
 // ==========================================================
 
-import { playClick, playChime } from './audio.js';
+import { playClick, playChime } from './audio.js?v=20261017-track';
 
 export function initRearrange() {
   const grid = document.querySelector('.grid');
@@ -14,7 +14,7 @@ export function initRearrange() {
   if (!grid || !editBtn || !bar) return;
 
   const tiles = [...grid.children];
-  const STORAGE_KEY = 'ikjas-tile-order';
+  const STORAGE_KEY = 'ikjas-tile-order-v2';
 
   // Restore saved order
   try {

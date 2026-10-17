@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ikzaaz Bakhtar Abdurrahman | Product Operations &amp; iOS Developer</title>
-  <meta name="description" content="Portfolio of Ikzaaz Bakhtar Abdurrahman — Computer Science graduate (Universitas Brawijaya) and Apple Developer Academy learner. Experienced in product operations, user research, and digital product development.">
+  <title>Ikzaaz Bakhtar Abdurrahman | Portfolio</title>
+  <meta name="description" content="Portfolio of Ikzaaz Bakhtar Abdurrahman">
   <link rel="canonical" href="https://ikzaazabd.site/">
 
   <!-- OpenGraph Social Sharing -->
   <meta property="og:site_name" content="Ikzaaz Bakhtar Abdurrahman">
-  <meta property="og:title" content="Ikzaaz Bakhtar Abdurrahman | Product Operations &amp; iOS Developer">
-  <meta property="og:description" content="Lifelong interactive bento portfolio of Ikzaaz Bakhtar Abdurrahman — Apple Developer Academy learner, product operations, UX research, and digital products.">
+  <meta property="og:title" content="Ikzaaz Bakhtar Abdurrahman | Portfolio">
+  <meta property="og:description" content="Portfolio of Ikzaaz Bakhtar Abdurrahman">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ikzaazabd.site/">
 
@@ -30,72 +30,27 @@
       "name": "Apple Developer Academy @ Infinite Learning"
     },
     "sameAs": [
-      "https://linkedin.com/in/ikzaaz-abdurrahman",
+      "https://linkedin.com/in/ikzaaz-abd",
       "https://github.com/ikzaazabd"
     ]
   }
   </script>
 
-  <!-- Early Theme Init to Prevent Flash -->
-  <script>
-    try {
-      const savedTheme = localStorage.getItem('theme');
-      document.documentElement.dataset.theme = savedTheme ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    } catch (e) {}
-  </script>
+  <script src="./js/theme-init.js"></script>
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml" href="./assets/apps/swift.svg">
-  <link rel="apple-touch-icon" href="./assets/apps/swift.svg">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./home.css">
-  <link rel="stylesheet" href="./memoji.css">
-  <link rel="stylesheet" href="./freeform.css">
-  <link rel="stylesheet" href="./photobooth.css">
-  <link rel="stylesheet" href="./spotlight.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="site-page home-page">
 
   <!-- Floating Navigation Pill -->
   <nav class="nav" aria-label="Main Navigation">
-    <a href="#intro" class="nav-link is-active">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#experience" class="nav-link">Experience</a>
-    <a href="#writing" class="nav-link">Writing</a>
-    <a href="#contact" class="nav-link">Contact</a>
-    <button class="nav-search" type="button" aria-label="Spotlight Search (⌘K)">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
-    </button>
+    <a href="./index.html" class="nav-link is-active" aria-current="page">Home</a>
+    <a href="./about.html" class="nav-link">About</a>    <a href="./projects.html" class="nav-link">Projects</a>
+
+    <a href="./writings.html" class="nav-link">Writings</a>
   </nav>
-
-  <!-- Theme Appearance Toggle -->
-  <button class="theme-toggle" type="button" aria-label="Toggle dark/light mode">
-    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z" fill="currentColor"/>
-    </svg>
-    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="12" cy="12" r="4.5" fill="currentColor"/>
-      <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-  </button>
-
-  <!-- Audio Sound Effects Toggle -->
-  <button class="sound-toggle" type="button" aria-label="Mute sound effects">
-    <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true">
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
-      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
-    </svg>
-    <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true">
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-      <line x1="23" y1="9" x2="17" y2="15"/>
-      <line x1="17" y1="9" x2="23" y2="15"/>
-    </svg>
-  </button>
 
   <!-- Main Page Container -->
   <main class="page">
@@ -104,71 +59,23 @@
       <!-- 1. Intro Tile (2x2) -->
       <section class="tile tile--intro" id="intro">
         <div>
-          <div class="intro-badge">
-            <span class="intro-badge-dot"></span>
-             Apple Developer Academy @ Infinite Learning · Batam
-          </div>
           <h1 class="intro-title">
-            Ikzaaz Bakhtar <span class="muted">is a Product Operations &amp; iOS Developer based in</span> Indonesia
+            Ikzaaz <span class="muted">is an Aspiring Product Manager</span>
           </h1>
           <div class="intro-body">
-            <p>Welcome to my personal digital workshop: <strong>ikzaazabd.site</strong>. This is where I document my work across product discovery, operations, and native digital engineering.</p>
-            <p>Computer Science graduate from <strong>Universitas Brawijaya (GPA 3.70)</strong> and current learner at <strong>Apple Developer Academy @ Infinite Learning Batam</strong>.</p>
-            <p>I specialize in bridging user needs, business strategy, and technical feasibility — with experience leading B2C product operations for 4 bootcamp programs serving 170+ students at <strong>dibimbing.id</strong>, conducting UX research for <strong>HydroTime</strong>, and building 6+ validated prototypes using Apple’s Challenge-Based Learning (CBL) framework.</p>
-            <p>Whether managing cross-functional teams for ML web apps like <strong>Arah</strong>, writing PRDs, or architecting native apps in <strong>Swift</strong> and <strong>Kotlin</strong>, I focus on building products people genuinely love to use.</p>
-            <p>This site is inspired by Apple's widget design language. Everything is interactive: test the Photo Booth camera, ask Siri, play the ambient lofi synth, or hit <kbd>⌘K</kbd> to search!</p>
+            <p>Welcome to my personal website. Version 1.0, I guess? After years of squeezing everything into PDF portfolios, I figured it was time for an upgrade.</p>
+            <p>By day, I'm an aspiring Product Manager. By night, a curious tinkerer, occasional designer, and someone who thinks building things from scratch sounds like fun.</p>
+            <p>My journey has taken me from leading teams and managing projects to designing digital experiences and figuring out what makes people tick. Somewhere along the way, I realized <strong>I'm more fascinated by why we build something than simply how we build it.</strong> That's what drew me toward Product Management. I enjoy connecting the dots between people's needs, business opportunities, and technical possibilities. But beyond products, <strong>I'm a people person at heart.</strong> Good conversations, fresh perspectives, and bringing people together are my kind of thing.</p>
+            <p>This website is my latest experiment. Built with curiosity, powered by GPT-6 and Gemini Argon, and held together by a questionable number of prompts. The result is a bento box of my favourite Apple apps, shrunk down into widgets. Part professional journey, part personal playground, and part excuse to keep experimenting with whatever technology catches my attention.</p>
+            <p><strong>Have a look around. Everything's a work in progress. Including me.</strong></p>
           </div>
         </div>
-        <div class="intro-tags">
-          <span class="intro-tag">Product Operations</span>
-          <span class="intro-tag">User Research</span>
-          <span class="intro-tag">Apple CBL Framework</span>
-          <span class="intro-tag">Swift &amp; SwiftUI</span>
-          <span class="intro-tag">Kotlin &amp; Java</span>
-          <span class="intro-tag">PRD &amp; LMS</span>
-          <span class="intro-tag">Universitas Brawijaya (3.70)</span>
-        </div>
+
       </section>
 
-      <!-- 2. Avatar / Memoji & Siri Tile (1x1) -->
-      <div class="tile tile--avatar" data-look="pixel" id="about">
-        <img src="./assets/avatar-pixel.svg" alt="Pixel Art Ikzaaz" class="avatar-layer avatar-pixel">
-        <img src="./assets/avatar-photo.svg" alt="Photo Ikzaaz" class="avatar-layer avatar-photo">
-        <img src="./assets/avatar-memoji.svg" alt="Memoji Ikzaaz" class="avatar-layer avatar-memoji">
-
-        <!-- Siri Glow Aura & Shimmer Wipe -->
-        <div class="siri-glow" aria-hidden="true"></div>
-        <div class="siri-shimmer" aria-hidden="true"></div>
-
-        <!-- Siri Typewriter Bar -->
-        <div class="siri-bar" aria-hidden="true">
-          <span class="siri-field">
-            <span class="siri-text"></span>
-            <span class="siri-caret"></span>
-          </span>
-          <span style="font-size:12px;opacity:0.8;"> Intelligence</span>
-        </div>
-
-        <!-- Siri Orb Trigger Button -->
-        <button class="siri-button" type="button" aria-label="Ask Siri to turn Ikzaaz into a Memoji">
-          <svg class="siri-orb" viewBox="0 0 100 100" aria-hidden="true">
-            <defs>
-              <radialGradient id="siri-bg" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#1e1b4b"/>
-                <stop offset="100%" stop-color="#020617"/>
-              </radialGradient>
-              <linearGradient id="siri-c1" x1="0" x2="1"><stop offset="0%" stop-color="#38bdf8"/><stop offset="1%" stop-color="#818cf8"/></linearGradient>
-              <linearGradient id="siri-c2" x1="0" x2="1"><stop offset="0%" stop-color="#f43f5e"/><stop offset="1%" stop-color="#fb923c"/></linearGradient>
-              <linearGradient id="siri-c3" x1="0" x2="1"><stop offset="0%" stop-color="#10b981"/><stop offset="1%" stop-color="#06b6d4"/></linearGradient>
-            </defs>
-            <circle cx="50" cy="50" r="48" fill="url(#siri-bg)"/>
-            <path d="M10 50 Q 30 20 50 50 T 90 50" stroke="url(#siri-c1)" stroke-width="8" fill="none" opacity="0.8"/>
-            <path d="M10 50 Q 30 80 50 50 T 90 50" stroke="url(#siri-c2)" stroke-width="8" fill="none" opacity="0.8"/>
-            <path d="M20 50 Q 50 15 80 50 T 20 50" stroke="url(#siri-c3)" stroke-width="6" fill="none" opacity="0.7"/>
-            <circle cx="50" cy="50" r="14" fill="#ffffff" opacity="0.85" filter="blur(2px)"/>
-          </svg>
-          <span class="siri-label">Memoji me</span>
-        </button>
+      <!-- 2. Profile Photo Tile (1x1) -->
+      <div class="tile tile--avatar" id="about">
+        <img src="./assets/images/ikzaaz-contact.jpeg" alt="Portrait of Ikzaaz" class="avatar-layer avatar-photo">
       </div>
 
       <!-- 3. Calendar / Office Hours / Coffee Chat (1x1) -->
@@ -178,25 +85,21 @@
             <p class="ch-weekday">Upcoming</p>
             <p class="ch-date">17</p>
           </div>
-          <span class="arrow" aria-hidden="true">↗</span>
+          <button class="arrow ch-open" type="button" aria-label="Choose a day for coffee chat"><span class="sf-symbol" data-symbol="symbols-arrow-up-right" aria-hidden="true"></span></button>
         </div>
 
         <ul class="ch-events">
-          <li class="ch-event ch-event--booked">
-            <span class="ch-title">Apple CBL Prototype Sprint</span>
-            <span class="ch-time">Booked</span>
-          </li>
-          <li class="ch-event ch-event--booked">
-            <span class="ch-title">Product &amp; User Research Review</span>
-            <span class="ch-time">Booked</span>
+          <li class="ch-event ch-event--booked ch-event--academy">
+            <span class="ch-title">Apple Developer Academy</span>
+            <span class="ch-time">Mon–Fri · 08:30–12:30 WIB</span><span class="ch-time">Booked</span>
           </li>
           <li class="ch-event ch-event--open">
             <span class="ch-title">Coffee Chat · 30 min</span>
-            <span class="ch-time">Available this week →</span>
+            <span class="ch-time ch-availability"><span class="ch-available">Available this week</span><span class="ch-book">Book it <span class="sf-symbol" data-symbol="symbols-arrow-up-right" aria-hidden="true"></span></span></span>
           </li>
         </ul>
 
-        <p class="ch-foot">1-on-1 calls · Product, Research &amp; iOS Chat</p>
+        <p class="ch-foot">1-on-1 calls</p>
 
         <!-- Day picker modal -->
         <div class="ch-picker" aria-hidden="true">
@@ -206,55 +109,59 @@
         </div>
       </section>
 
+      <!-- Career timeline, inspired by Freeform -->
+      <section class="tile tile--freeform" id="experience" aria-label="Work experience timeline">
+        <header class="ff-titlebar">
+          <div class="ff-lights" aria-hidden="true"><span></span><span></span><span></span></div>
+          <span class="career-board-title">My journey</span>
+          <button class="ff-tool career-expand" type="button" aria-label="Expand work experience timeline">
+            <span class="sf-symbol " data-symbol="symbols-arrow-up-left-and-arrow-down-right" aria-hidden="true"></span>
+          </button>
+        </header>
+        <div class="career-viewport">
+          <div class="career-board">
+            <div class="career-notes">
+              <p class="career-note note-peach">Ideas into stories.<br>Content for 2–4 clients each month.</p>
+              <p class="career-note note-green">People &amp; products.<br>4 bootcamps. 170+ students.</p>
+              <p class="career-note note-yellow">From discovery to validation.<br>6+ digital prototypes.</p>
+            </div>
+            <div class="career-cards">
+              <article class="career-card"><span class="career-company company-orange"><span class="sf-symbol " data-symbol="symbols-briefcase-fill" aria-hidden="true"></span></span><h3>Content Creator Intern</h3><p>Digimarly</p><small>Jan – Jul 2025<br>Surabaya, Indonesia</small></article>
+              <article class="career-card"><span class="career-company company-blue"><span class="sf-symbol " data-symbol="symbols-briefcase-fill" aria-hidden="true"></span></span><h3>B2C Product Operations Intern</h3><p>dibimbing.id</p><small>Jul 2025 – Feb 2026<br>Jakarta, Indonesia</small></article>
+              <article class="career-card"><img class="career-company" src="./assets/images/symbols/swift.png" alt=""><h3>Junior Developer (Learner)</h3><p>Apple Developer Academy<br>@ Infinite Learning</p><small>Feb 2026 – Present<br>Batam, Indonesia</small></article>
+            </div>
+            <div class="career-bars" aria-hidden="true"><span>Content &amp; storytelling</span><span>Product operations</span><span>Discovery &amp; development <span class="sf-symbol " data-symbol="symbols-arrow-up-right" aria-hidden="true"></span></span></div>
+            <div class="career-axis"><span>Jan 2025</span><span>Jul 2025</span><span>Feb 2026</span><span>Now</span></div>
+            <p class="career-education">Along the way · Computer Science, Universitas Brawijaya · Aug 2022 – Jan 2026</p>
+          </div>
+        </div>
+        <div class="career-controls"><button type="button" data-career-zoom="out" aria-label="Zoom out timeline"><span class="sf-symbol " data-symbol="symbols-minus" aria-hidden="true"></span></button><output class="career-scale">Fit</output><button type="button" data-career-zoom="in" aria-label="Zoom in timeline"><span class="sf-symbol " data-symbol="symbols-plus" aria-hidden="true"></span></button><button type="button" data-career-zoom="fit">Fit</button></div>
+      </section>
+
       <!-- 4. macOS App Switcher Tile (2x1) -->
-      <section class="tile tile--switcher" id="experience" aria-label="Projects and Experience Showcase">
+      <section class="tile tile--switcher" id="projects" aria-label="Projects">
         <div class="sw-top">
           <p class="sw-label">
-            <img class="sw-label-icon" src="./assets/apps/xcode.svg" alt="">
+            <img class="sw-label-icon" src="./assets/images/apps/xcode.png" alt="">
             <span class="sw-label-name">Projects</span>
           </p>
-          <span style="font-size:12px;color:var(--muted);font-weight:600;">Work &amp; Experience</span>
         </div>
 
         <div class="sw-cards-container">
           <!-- Projects Panel -->
           <div class="sw-panel is-active" data-app="projects">
             <a class="sw-card" href="https://github.com/ikzaazabd/Arah" target="_blank" rel="noopener">
-              <span class="sw-card-title">🤖 Arah: ML Potential Test</span>
+              <span class="sw-card-title"><span class="sf-symbol " data-symbol="symbols-brain" aria-hidden="true"></span> Arah: ML Potential Test</span>
               <span class="sw-card-desc">Project Manager, UI/UX &amp; Full-Stack Dev. Led 3 developers building RESTful API and ML model integration.</span>
             </a>
             <div class="sw-card">
-              <span class="sw-card-title">💧 HydroTime App</span>
+              <span class="sw-card-title"><span class="sf-symbol " data-symbol="symbols-drop-fill" aria-hidden="true"></span> HydroTime App</span>
               <span class="sw-card-desc">UX Researcher. Personas, user research, wireframes aligned with SDG 3: Good Health and Well-being (Grade A).</span>
             </div>
             <a class="sw-card" href="https://github.com/ikzaazabd/MyGKM" target="_blank" rel="noopener">
-              <span class="sw-card-title">📱 MyGKM Canteen App</span>
+              <span class="sw-card-title"><span class="sf-symbol " data-symbol="symbols-iphone" aria-hidden="true"></span> MyGKM Canteen App</span>
               <span class="sw-card-desc">Android Developer. End-to-end mobile app in Android Studio with authentication and payment processing.</span>
             </a>
-          </div>
-
-          <!-- Apple Academy Panel -->
-          <div class="sw-panel" data-app="academy">
-            <div class="sw-card">
-              <span class="sw-card-title"> Apple Developer Academy</span>
-              <span class="sw-card-desc">Infinite Learning Batam (Feb 2026 - Present). Developed 6+ validated prototypes using Challenge-Based Learning.</span>
-            </div>
-            <div class="sw-card">
-              <span class="sw-card-title">User Discovery &amp; Testing</span>
-              <span class="sw-card-desc">Interviewed target users, synthesized research insights, and aligned feasibility with cross-functional teams.</span>
-            </div>
-          </div>
-
-          <!-- Product Ops Panel -->
-          <div class="sw-panel" data-app="product">
-            <div class="sw-card">
-              <span class="sw-card-title">PT Dibimbing Digital Indonesia</span>
-              <span class="sw-card-desc">B2C Product Operations Intern. Supported PRD development, managed end-to-end ops for 4 bootcamps across 170+ students.</span>
-            </div>
-            <div class="sw-card">
-              <span class="sw-card-title">PT Digimarly Solusi Digital</span>
-              <span class="sw-card-desc">Content Creator Intern. Created audience-focused video and visual content for 2–4 clients per month.</span>
-            </div>
           </div>
 
           <!-- GitHub Panel -->
@@ -285,329 +192,130 @@
         <!-- macOS Dock -->
         <div class="sw-dock">
           <button type="button" class="sw-app is-active" data-app="projects" aria-label="Projects">
-            <img src="./assets/apps/xcode.svg" alt="Projects">
-          </button>
-          <button type="button" class="sw-app" data-app="academy" aria-label="Apple Academy">
-            <img src="./assets/apps/swift.svg" alt="Apple Academy">
-          </button>
-          <button type="button" class="sw-app" data-app="product" aria-label="Product Operations">
-            <img src="./assets/apps/notes.svg" alt="Product Operations">
+            <img src="./assets/images/apps/xcode.png" alt="Projects">
           </button>
           <button type="button" class="sw-app" data-app="github" aria-label="GitHub">
-            <img src="./assets/apps/github.svg" alt="GitHub">
+            <img src="./assets/images/apps/github.svg" alt="GitHub">
           </button>
           <button type="button" class="sw-app" data-app="figma" aria-label="Figma">
-            <img src="./assets/apps/figma.svg" alt="Figma">
+            <img src="./assets/images/apps/figma.svg" alt="Figma">
           </button>
         </div>
       </section>
 
       <!-- 5. Apple Mail / Articles & Thesis Tile (2x1) -->
       <section class="tile tile--newsletter" id="writing" aria-label="Articles, Thesis and Publications">
-        <div class="ml-sidebar" aria-hidden="true">
-          <div class="ml-lights"><span></span><span></span><span></span></div>
-          <p class="ml-heading">Mailboxes</p>
-          <div class="ml-box is-current">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="m4 6 8 7 8-7"/></svg>
-            Inbox <span class="ml-count">4</span>
-          </div>
-          <div class="ml-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            Articles
-          </div>
-          <div class="ml-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            Academy
-          </div>
-        </div>
-
+        <aside class="ml-sidebar" aria-label="Publication mailboxes">
+          <div class="ml-window-controls"><div class="ml-lights" aria-hidden="true"><span></span><span></span><span></span></div><button class="ml-sidebar-toggle" type="button" aria-label="Hide Navigator" aria-expanded="true"><span class="sf-symbol " data-symbol="symbols-sidebar-left" aria-hidden="true"></span></button></div>
+          <p class="ml-heading">Favorites</p>
+          <button type="button" class="ml-box is-current" data-mail-filter="all" aria-pressed="true"><span class="sf-symbol " data-symbol="symbols-tray-2" aria-hidden="true"></span><span>All Inboxes</span><span class="ml-count">2</span></button>
+          <button type="button" class="ml-box" data-mail-filter="article" aria-pressed="false"><span class="sf-symbol " data-symbol="symbols-flag" aria-hidden="true"></span><span>Articles</span></button>
+          <button type="button" class="ml-box" data-mail-filter="research" aria-pressed="false"><span class="sf-symbol " data-symbol="symbols-doc-text" aria-hidden="true"></span><span>Research</span></button>
+        </aside>
         <div class="ml-main">
           <div class="ml-toolbar">
-            <div>
-              <p class="ml-title">Articles &amp; Research Logs</p>
-              <p class="ml-sub">Ikzaaz Bakhtar · UX &amp; Product Writing</p>
-            </div>
-            <button class="ml-subscribe" type="button" onclick="alert('Subscribed to Ikzaaz’s DevLogs! Updates will arrive in your inbox.')">Subscribe</button>
+            <div><p class="ml-title">Articles &amp; Research</p><p class="ml-sub">More to come.</p></div>
           </div>
-
           <ul class="ml-list">
-            <li class="ml-row" data-preview="I explored the fundamentals of usability testing, formative vs summative evaluations, and how early user testing prevents costly product rework. Published on Medium.">
-              <span class="ml-dot"></span>
-              <div class="ml-info">
-                <span class="ml-from">Medium</span>
-                <span class="ml-subject">Usability Testing 101: Pengertian, Metode, dan Tahapan</span>
-              </div>
-              <span class="ml-date">Published</span>
-            </li>
-            <li class="ml-row" data-preview="Undergraduate Thesis at Universitas Brawijaya (GPA 3.70): Evaluation of the Success of Dibimbing Learning Center E-Learning Platform Using the DeLone and McLean Model.">
-              <span class="ml-dot"></span>
-              <div class="ml-info">
-                <span class="ml-from">Thesis · UB</span>
-                <span class="ml-subject">DeLone &amp; McLean E-Learning Platform Success Evaluation</span>
-              </div>
-              <span class="ml-date">2026</span>
-            </li>
-            <li class="ml-row is-read" data-preview="Selected as 1 of 2,500 participants from 63,000+ applicants across 374 universities in Indonesia. Completed 910 hours of Front-End and Back-End Web Development with Grade A (Score 91.9/100).">
-              <span class="ml-dot"></span>
-              <div class="ml-info">
-                <span class="ml-from">DBS Foundation</span>
-                <span class="ml-subject">Coding Camp 2025: Top 2,500 of 63,000+ Applicants (Grade A)</span>
-              </div>
-              <span class="ml-date">2025</span>
-            </li>
-            <li class="ml-row is-read" data-preview="Working with cross-functional teams in Batam to research, design, and develop 6+ digital product prototypes covering problem discovery, ideation, and validation.">
-              <span class="ml-dot"></span>
-              <div class="ml-info">
-                <span class="ml-from">Apple Academy</span>
-                <span class="ml-subject">Challenge-Based Learning (CBL) Framework in Practice</span>
-              </div>
-              <span class="ml-date">Active</span>
-            </li>
+            <li data-publication="article"><a class="ml-row" href="https://medium.com/@ikzaazabd/usability-testing-101-pengertian-metode-dan-tahapan-4f0325415438" target="_blank" rel="noopener">
+              <span class="ml-dot"></span><div class="ml-info"><span class="ml-from">Medium</span><span class="ml-subject">Usability Testing 101: Pengertian, Metode, dan Tahapan</span></div><span class="ml-date"><span class="sf-symbol " data-symbol="symbols-arrow-up-right" aria-hidden="true"></span></span>
+            </a></li>
+            <li data-publication="research"><a class="ml-row" href="https://repository.ub.ac.id/id/eprint/254855/" target="_blank" rel="noopener">
+              <span class="ml-dot"></span><div class="ml-info"><span class="ml-from">Undergraduate thesis · UB</span><span class="ml-subject">Evaluating Dibimbing Learning Center with the DeLone &amp; McLean Model</span></div><span class="ml-date"><span class="sf-symbol " data-symbol="symbols-arrow-up-right" aria-hidden="true"></span></span>
+            </a></li>
           </ul>
-        </div>
-      </section>
-
-      <!-- 6. Apple Freeform Interactive Board (2x1) -->
-      <section class="tile tile--freeform" aria-label="Apple Freeform Board">
-        <header class="ff-titlebar">
-          <div class="ff-lights">
-            <span></span><span></span><span></span>
-          </div>
-
-          <div class="ff-tools">
-            <button class="ff-tool" type="button" data-add="note" title="Add Sticky Note" aria-label="Add Sticky Note">
-              <svg viewBox="0 0 24 24"><path d="M4.5 4.5h15v9.5l-5.5 5.5H4.5z"/><path d="M19.5 14H14v5.5"/></svg>
-            </button>
-            <button class="ff-tool" type="button" data-add="pen" title="Drawing Pen" aria-label="Drawing Pen">
-              <svg viewBox="0 0 24 24"><path d="m14 3 7 7-13 13H1v-7L14 3z"/></svg>
-            </button>
-            <button class="ff-tool" type="button" data-act="reset" title="Clear Canvas" aria-label="Clear Canvas">
-              <svg viewBox="0 0 24 24"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-            </button>
-          </div>
-
-          <div class="ff-actions">
-            <button class="ff-tool ff-expand" type="button" title="Expand Tile" aria-label="Expand Tile">
-              <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-            </button>
-          </div>
-        </header>
-
-        <div class="ff-viewport">
-          <canvas class="ff-canvas"></canvas>
-          <div class="ff-items"></div>
-
-          <div class="ff-zoom-bar">
-            <button type="button" data-zoom="out">−</button>
-            <span class="ff-zoom-val">100%</span>
-            <button type="button" data-zoom="in">+</button>
-            <button type="button" data-zoom="fit" title="Zoom Fit">⊡</button>
-          </div>
         </div>
       </section>
 
       <!-- 7. Photo Booth Tile (1x1) -->
       <button class="tile tile--photobooth" type="button" aria-label="Open macOS Photo Booth">
-        <span class="tile-app"><img class="tile-app-icon" src="./assets/apps/photobooth.svg" alt="">Photo Booth</span>
-        <img class="pb-app-icon" src="./assets/apps/photobooth.svg" alt="Photo Booth App">
-        <span class="pb-caption">📸 Go on, take a selfie</span>
-        <span class="arrow" aria-hidden="true">↗</span>
+        <span class="tile-app"><img class="tile-app-icon" src="./assets/images/apps/photobooth.png" alt="">Photo Booth</span>
+        <img class="pb-app-icon" src="./assets/images/apps/photobooth.png" alt="Photo Booth App">
+        <span class="pb-caption"><span class="sf-symbol " data-symbol="symbols-camera" aria-hidden="true"></span> Go on, take a selfie</span>
+        <span class="arrow" aria-hidden="true"><span class="sf-symbol " data-symbol="symbols-arrow-up-right" aria-hidden="true"></span></span>
       </button>
 
       <!-- 8. Apple Photos Gallery (1x1) -->
-      <section class="tile tile--photos" aria-label="Apple Photos Gallery">
-        <div class="ph-slides">
-          <figure class="ph-slide is-active" data-device="Apple iPhone 15 Pro" data-lens="Main Camera — 24 mm f/1.78" data-mp="48 MP" data-loc="Apple Developer Academy @ Infinite Learning Batam">
-            <img src="./assets/photos/photo-1.svg" alt="Apple Developer Academy Batam Lab">
-            <figcaption class="ph-caption">📍 Apple Developer Academy @ Batam</figcaption>
-          </figure>
-          <figure class="ph-slide" data-device="MacBook Pro" data-lens="Arah Web Stack" data-mp="Full-Stack Dev" data-loc="Capstone Project Development">
-            <img src="./assets/photos/photo-2.svg" alt="Arah Capstone Architecture">
-            <figcaption class="ph-caption">📍 Arah ML Web App Capstone</figcaption>
-          </figure>
-          <figure class="ph-slide" data-device="Figma Studio" data-lens="HydroTime App" data-mp="Vector UI" data-loc="User Research &amp; Wireframes">
-            <img src="./assets/photos/photo-3.svg" alt="HydroTime UX Prototype">
-            <figcaption class="ph-caption">📍 HydroTime Water Drinking UX</figcaption>
-          </figure>
-          <figure class="ph-slide" data-device="Universitas Brawijaya" data-lens="Faculty of CS" data-mp="GPA 3.70" data-loc="Malang, Indonesia">
-            <img src="./assets/photos/photo-4.svg" alt="Universitas Brawijaya CS Lab">
-            <figcaption class="ph-caption">📍 Universitas Brawijaya · Malang</figcaption>
-          </figure>
-        </div>
+      <section class="tile tile--photos" aria-label="Apple Photos Gallery" aria-roledescription="carousel">
+<div class="ph-slides"><figure class="ph-slide is-active" data-date="2024-01-28" data-device="Apple iPhone 13" data-lens="Ultra Wide Camera — 13 mm ƒ2.4" data-loc="Kuala Lumpur, Malaysia" aria-hidden="false"><img src="./assets/images/photos/memory-2.jpeg" alt="Friends at the Petronas Twin Towers" loading="lazy" class="photo-position-1"><figcaption class="ph-caption"><span aria-hidden="true">📍</span>Kuala Lumpur, Malaysia</figcaption></figure><figure class="ph-slide" data-date="2024-01-30" data-device="Apple iPhone 13" data-lens="Wide Camera — 26 mm ƒ1.6" data-loc="Genting Highlands, Malaysia" aria-hidden="true"><img src="./assets/images/photos/memory-1.jpeg" alt="Ikzaaz in a cable car at Genting Highlands" loading="lazy" class="photo-position-2"><figcaption class="ph-caption"><span aria-hidden="true">📍</span>Genting Highlands, Malaysia</figcaption></figure><figure class="ph-slide" data-date="2025-08-16" data-device="Apple iPhone 13" data-lens="Wide Camera — 26 mm ƒ1.6" data-loc="Iloilo, Philippines" aria-hidden="true"><img src="./assets/images/photos/memory-3.jpeg" alt="Ikzaaz at Casa Mariquit, Iloilo" loading="lazy" class="photo-position-3"><figcaption class="ph-caption"><span aria-hidden="true">📍</span>Iloilo, Philippines</figcaption></figure><figure class="ph-slide" data-date="2025-08-16" data-device="Apple iPhone 13" data-lens="Wide Camera — 26 mm ƒ1.6" data-loc="Iloilo, Philippines" aria-hidden="true"><img src="./assets/images/photos/memory-4.jpeg" alt="Painted ceiling in Iloilo" loading="lazy" class="photo-position-4"><figcaption class="ph-caption"><span aria-hidden="true">📍</span>Iloilo, Philippines</figcaption></figure><figure class="ph-slide" data-date="2026-04-02" data-device="Apple iPhone 17" data-lens="Main Camera — 26 mm ƒ1.6" data-loc="Marina Bay Sands, Singapore" aria-hidden="true"><img src="./assets/images/photos/memory-5.jpeg" alt="Marina Bay Sands from below" loading="lazy" class="photo-position-5"><figcaption class="ph-caption"><span aria-hidden="true">📍</span>Marina Bay Sands, Singapore</figcaption></figure><figure class="ph-slide" data-date="2026-04-05" data-device="Apple iPhone 17" data-lens="Main Camera — 26 mm ƒ1.6" data-loc="Johor Bahru, Malaysia" aria-hidden="true"><img src="./assets/images/photos/memory-6.jpeg" alt="A leafy shophouse in Johor Bahru" loading="lazy" class="photo-position-6"><figcaption class="ph-caption"><span aria-hidden="true">📍</span>Johor Bahru, Malaysia</figcaption></figure><figure class="ph-slide" data-date="2026-05-16" data-device="Apple iPhone 17" data-lens="Main Camera — 26 mm ƒ1.6" data-loc="Apple Developer Center, Singapore" aria-hidden="true"><img src="./assets/images/photos/memory-7.jpeg" alt="Ikzaaz at Apple Developer Center Singapore" loading="lazy" class="photo-position-7"><figcaption class="ph-caption"><span aria-hidden="true">📍</span>Apple Developer Center, Singapore</figcaption></figure></div>
+<div class="ph-indicators" aria-label="Choose a photo"><button type="button" class="ph-dot" aria-label="Show photo 1: Kuala Lumpur, Malaysia" aria-pressed="true"><span></span></button><button type="button" class="ph-dot" aria-label="Show photo 2: Genting Highlands, Malaysia" aria-pressed="false"><span></span></button><button type="button" class="ph-dot" aria-label="Show photo 3: Iloilo, Philippines" aria-pressed="false"><span></span></button><button type="button" class="ph-dot" aria-label="Show photo 4: Iloilo, Philippines" aria-pressed="false"><span></span></button><button type="button" class="ph-dot" aria-label="Show photo 5: Marina Bay Sands, Singapore" aria-pressed="false"><span></span></button><button type="button" class="ph-dot" aria-label="Show photo 6: Johor Bahru, Malaysia" aria-pressed="false"><span></span></button><button type="button" class="ph-dot" aria-label="Show photo 7: Apple Developer Center, Singapore" aria-pressed="false"><span></span></button></div>
+<img class="ph-icon" src="./assets/images/apps/photos.png" alt="Photos">
+<button class="ph-info-btn" type="button" aria-label="Show photo information" aria-expanded="false" aria-controls="photo-information"><span class="sf-symbol" data-symbol="symbols-info-circle" aria-hidden="true"></span></button>
+<div class="ph-info-panel" id="photo-information" hidden><p class="ph-exif-date"></p><div class="ph-metadata"><p class="ph-exif-device"></p><p class="ph-exif-lens"></p><p class="ph-exif-loc"></p></div></div>
+</section>
 
-        <button class="ph-info-btn" type="button" aria-label="View Photo EXIF Details">ⓘ</button>
-
-        <div class="ph-info-panel" aria-hidden="true">
-          <p style="font-weight:700;font-size:15px;margin-bottom:4px;">Photo Details</p>
-          <p><strong>Subject:</strong> <span class="ph-exif-device">Apple Developer Academy</span></p>
-          <p><strong>Camera:</strong> <span class="ph-exif-lens">Apple iPhone 15 Pro</span></p>
-          <p><strong>Location:</strong> <span class="ph-exif-loc">Infinite Learning, Batam</span></p>
-          <p><strong>Domain:</strong> <span class="ph-exif-mp">ikzaazabd.site</span></p>
-          <p style="font-size:11px;opacity:0.6;margin-top:4px;">Tap anywhere to close</p>
-        </div>
-
-        <!-- 8-petal Photos App Icon -->
-        <svg class="ph-icon" viewBox="0 0 100 100" aria-hidden="true">
-          <g>
-            <rect x="39" y="14" width="22" height="37" rx="11" fill="#f89c32" transform="rotate(0 50 50)"/>
-            <rect x="39" y="14" width="22" height="37" rx="11" fill="#f7d235" transform="rotate(45 50 50)"/>
-            <rect x="39" y="14" width="22" height="37" rx="11" fill="#b3d43f" transform="rotate(90 50 50)"/>
-            <rect x="39" y="14" width="22" height="37" rx="11" fill="#5dc15b" transform="rotate(135 50 50)"/>
-            <rect x="39" y="14" width="22" height="37" rx="11" fill="#3bb3c3" transform="rotate(180 50 50)"/>
-            <rect x="39" y="14" width="22" height="37" rx="11" fill="#4f86e3" transform="rotate(225 50 50)"/>
-            <rect x="39" y="14" width="22" height="37" rx="11" fill="#9a66d1" transform="rotate(270 50 50)"/>
-            <rect x="39" y="14" width="22" height="37" rx="11" fill="#ec4e72" transform="rotate(315 50 50)"/>
-          </g>
-        </svg>
-      </section>
-
-      <!-- 9. Apple Music / Spotify Player (2x2) -->
-      <section class="tile tile--spotify" aria-label="Music and Coding Playlists">
-        <div class="sp-glow" aria-hidden="true"></div>
-
-        <div class="sp-head">
-          <span class="tile-app">
-            <svg class="tile-app-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1ed760"/><path d="M6.5 9.3c3.8-1.1 8-.8 11.2 1M7 12.4c3.1-.9 6.6-.6 9.3.9M7.6 15.4c2.5-.7 5.1-.5 7.2.7" stroke="#000" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
-            Personal Playlists
-          </span>
-          <span style="font-size:12px;color:var(--muted);font-weight:600;"> Web Audio Synth</span>
-        </div>
-
-        <div class="sp-hero">
-          <img class="sp-cover" src="./assets/covers/playlist-1.svg" alt="Playlist Cover">
-          <div class="sp-hero-text">
-            <span class="sp-kicker">Featured Playlist</span>
-            <h2 class="sp-title">Deep Focus Product &amp; Code</h2>
-            <p class="sp-meta"><strong>ikzaazabd</strong> · 28 tracks</p>
+      <section class="tile tile--music" aria-label="Personal playlist on Apple Music">
+        <header class="music-header"><span><img class="music-app-icon" src="./assets/images/apps/music.png" alt="">Personal playlist</span></header>
+        <div class="music-hero"><a href="https://music.apple.com/id/playlist/live-laugh-love-lany/pl.u-RRbVvBVFmdLmZE9" target="_blank" rel="noopener"><img class="music-cover" src="https://is1-ssl.mzstatic.com/image/thumb/SG-MQ-US-001-Image000001/v4/65/27/4a/65274a2d-6c06-e359-edc4-cf3a2bf842c8/image/600x600bb.jpg" alt="live, laugh, love, LANY playlist artwork"></a><div><p class="music-caption">PLAYLIST</p><h2>live, laugh,<br>love, LANY</h2><a class="music-owner" href="https://music.apple.com/profile/ikjas24" target="_blank" rel="noopener">Ikzaaz Abdurrahman <span class="sf-symbol " data-symbol="symbols-arrow-up-right" aria-hidden="true"></span></a><p class="music-meta">27 songs · 1 hour 39 minutes</p></div></div>
+        <ol class="music-tracks" aria-label="Songs in the playlist">
+          <li><div class="music-track"><span class="music-number">1</span><span>live it down<small>LANY</small></span></div></li>
+          <li><div class="music-track"><span class="music-number">2</span><span>13<small>LANY</small></span></div></li>
+          <li><div class="music-track"><span class="music-number">3</span><span>anything 4 u<small>LANY</small></span></div></li>
+          <li><div class="music-track"><span class="music-number">4</span><span>&#x27;Cause You Have To<small>LANY</small></span></div></li>
+          <li><div class="music-track"><span class="music-number">5</span><span>Malibu Nights<small>LANY</small></span></div></li>
+          <li><div class="music-track"><span class="music-number">6</span><span>Thick and Thin<small>LANY</small></span></div></li>
+          <li><div class="music-track"><span class="music-number">7</span><span>Super Far<small>LANY</small></span></div></li>
+          <li><div class="music-track"><span class="music-number">8</span><span>ILYSB<small>LANY</small></span></div></li>
+          <li><div class="music-track"><span class="music-number">9</span><span>Mean It<small>LANY &amp; Lauv</small></span></div></li>
+          <li><div class="music-track"><span class="music-number">10</span><span>Pink Skies<small>LANY</small></span></div></li>
+        </ol>
+        <div class="ambient-player" role="group" aria-label="Path Of The Fireflies music player">
+          <audio src="./assets/audio/path-of-the-fireflies.mp3" preload="metadata" loop></audio>
+          <div class="ambient-art" aria-hidden="true"><span class="sf-symbol " data-symbol="symbols-music-note" aria-hidden="true"></span></div>
+          <div class="ambient-info"><span class="ambient-title">Path Of The Fireflies</span><small>AERØHEAD</small></div>
+          <progress class="ambient-progress" value="0" max="24" aria-label="Track playback progress"></progress>
+          <div class="ambient-buttons">
+            <button type="button" data-audio="previous" aria-label="Restart Path Of The Fireflies"><span class="sf-symbol " data-symbol="symbols-backward-end-fill" aria-hidden="true"></span></button>
+            <button class="ambient-play" type="button" data-audio="play" aria-label="Play Path Of The Fireflies" aria-pressed="false"><span class="sf-symbol " data-symbol="symbols-play-fill" aria-hidden="true"></span></button>
+            <button type="button" data-audio="next" aria-label="Replay Path Of The Fireflies"><span class="sf-symbol " data-symbol="symbols-forward-end-fill" aria-hidden="true"></span></button>
           </div>
-          <button class="sp-play-btn" type="button" aria-label="Play Playlist">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </button>
-        </div>
-
-        <ul class="sp-list">
-          <li class="sp-row is-active" data-color="#3b82f6" data-detail="28 tracks">
-            <img src="./assets/covers/playlist-1.svg" alt="">
-            <span class="sp-row-title">Deep Focus Product &amp; Code</span>
-            <span class="sp-row-count">28 tracks</span>
-          </li>
-          <li class="sp-row" data-color="#ec4899" data-detail="34 tracks">
-            <img src="./assets/covers/playlist-2.svg" alt="">
-            <span class="sp-row-title">Apple Lo-Fi Chill</span>
-            <span class="sp-row-count">34 tracks</span>
-          </li>
-          <li class="sp-row" data-color="#8b5cf6" data-detail="42 tracks">
-            <img src="./assets/covers/playlist-3.svg" alt="">
-            <span class="sp-row-title">Midnight Synthesis</span>
-            <span class="sp-row-count">42 tracks</span>
-          </li>
-        </ul>
-
-        <!-- Mini player bar -->
-        <div class="sp-player">
-          <img class="sp-player-cover" src="./assets/covers/playlist-1.svg" alt="">
-          <div class="sp-player-info">
-            <span class="sp-player-title">Deep Focus Product &amp; Code</span>
-          </div>
-          <div class="sp-controls">
-            <button class="sp-player-play" type="button" aria-label="Play/Pause">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-          </div>
+          <span class="ambient-error" role="status"></span>
         </div>
       </section>
 
-      <!-- 10. Apple Find My Tile (1x1) -->
-      <section class="tile tile--findmy" aria-label="Find My Campus Tracker">
-        <img class="fm-map fm-map--light" src="./assets/map/map-light.svg" alt="Infinite Learning Batam Map Light">
-        <img class="fm-map fm-map--dark" src="./assets/map/map-dark.svg" alt="Infinite Learning Batam Map Dark">
-
-        <!-- Pulsing avatar pin -->
-        <div class="fm-person" aria-hidden="true">
-          <span class="fm-halo"></span>
-          <span class="fm-pin"><img src="./assets/avatar-photo.svg" alt="Pin"></span>
-        </div>
-
-        <div class="fm-card">
-          <img class="fm-card-avatar" src="./assets/avatar-photo.svg" alt="Ikzaaz">
-          <div>
-            <p><strong>Ikzaaz Bakhtar</strong></p>
-            <p class="fm-status"><span class="fm-street">Infinite Learning</span> · Batam</p>
-          </div>
-        </div>
+      <section class="tile tile--findmy" aria-label="Map near Apple Developer Academy, Nongsa, Batam">
+        <div class="academy-map" role="img" aria-label="Map around Nongsa Digital Park, home of Apple Developer Academy at Infinite Learning, Batam"></div>
+        <a class="map-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>
+        <div class="fm-person" aria-hidden="true"><span class="fm-halo"></span><span class="fm-pin"><img src="./assets/images/ikzaaz-portrait.jpeg" alt=""></span></div>
+        <a class="fm-card" href="https://maps.apple.com/?ll=1.185416,104.101666&amp;q=Nongsa%20Digital%20Park" target="_blank" rel="noopener" aria-label="Open Nongsa Digital Park in Apple Maps"><span class="fm-card-avatar"><img src="./assets/images/ikzaaz-portrait.jpeg" alt=""></span><div><p><strong>Ikzaaz</strong></p><p class="fm-status">Nongsa, Batam <span class="sf-symbol " data-symbol="symbols-arrow-up-right" aria-hidden="true"></span></p></div></a>
+      <div class="fm-map-chrome" aria-hidden="true"><span class="fm-compass">N</span><span class="fm-zoom-decoration"><span class="sf-symbol" data-symbol="symbols-plus"></span><span class="sf-symbol" data-symbol="symbols-minus"></span></span></div>
       </section>
 
       <!-- 11. Apple Contacts Card (1x1) -->
       <section class="tile tile--contact" id="contact" aria-label="Contact Card">
         <div>
           <div class="ct-avatar">
-            <img src="./assets/avatar-photo.svg" alt="Ikzaaz Bakhtar Abdurrahman">
+            <img src="./assets/images/ikzaaz-portrait.jpeg" alt="Ikzaaz Bakhtar Abdurrahman">
           </div>
-          <h2 class="ct-name">Ikzaaz Bakhtar</h2>
-          <p class="ct-title">Product Operations &amp; iOS Developer</p>
+          <h2 class="ct-name">Ikzaaz Bakhtar Abdurrahman</h2>
+          <p class="ct-title">Junior Developer @Apple Developer Academy</p>
         </div>
 
         <div class="ct-actions">
-          <a class="ct-action-btn" href="mailto:ikzaazabd@gmail.com?subject=Hello%20via%20ikzaazabd.site" title="Email Ikzaaz" aria-label="Email Ikzaaz">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a class="ct-action-btn" href="https://www.instagram.com/ikzaazabd/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+            <span class="sf-symbol" data-symbol="apps-instagram" aria-hidden="true"></span>
           </a>
-          <a class="ct-action-btn" href="https://linkedin.com/in/ikzaaz-abdurrahman" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+          <a class="ct-action-btn" href="https://linkedin.com/in/ikzaaz-abd" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
           </a>
           <a class="ct-action-btn" href="https://github.com/ikzaazabd" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+            <span class="sf-symbol" data-symbol="apps-github" aria-hidden="true"></span>
           </a>
-          <a class="ct-action-btn" href="./assets/ikjas.vcf" download="Ikzaaz-Bakhtar.vcf" title="Download vCard" aria-label="Download vCard">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <a class="ct-action-btn" href="./assets/Ikzaaz-Abdurrahman-CV.pdf" download="Ikzaaz-Abdurrahman-CV.pdf" title="Download ATS CV (PDF)" aria-label="Download ATS CV (PDF)">
+            <span class="sf-symbol " data-symbol="symbols-arrow-down-to-line" aria-hidden="true"></span>
           </a>
         </div>
 
-        <div class="ct-copy-box">
-          <span class="ct-copy-val">ikzaazabd@gmail.com</span>
-          <span class="ct-status" style="font-weight:600;color:var(--apple-blue);">Copy</span>
-        </div>
+        <a class="ct-email" href="mailto:ikzaazabd@gmail.com"><span><small>email</small>ikzaazabd@gmail.com</span><span aria-hidden="true"><span class="sf-symbol " data-symbol="symbols-arrow-up-right" aria-hidden="true"></span></span></a>
       </section>
 
-      <!-- 12. Apple Books Shelf Tile (2x1) -->
-      <a class="tile tile--books" href="#writing">
-        <div class="bk-text">
-          <span class="tile-app"><img class="tile-app-icon" src="./assets/apps/books.svg" alt="">Books</span>
-          <h2 class="tile-heading" style="margin: 8px 0;">On my reading shelf</h2>
-          <p class="small">Books shaping my approach to product strategy, human interface design, and systems engineering.</p>
-        </div>
-        <div class="bk-shelf" aria-hidden="true">
-          <div class="bk-cover"><img src="./assets/books/book-1.svg" alt="Apple HIG"></div>
-          <div class="bk-cover"><img src="./assets/books/book-2.svg" alt="Swift Apprentice"></div>
-          <div class="bk-cover"><img src="./assets/books/book-3.svg" alt="Data-Intensive Apps"></div>
-        </div>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
-
-      <!-- 13. Spotlight Shortcut Tile (1x1) -->
-      <button class="tile tile--shortcut" type="button" aria-label="Spotlight Search Shortcut">
-        <div class="kc-keys" aria-hidden="true">
-          <div class="kc-key">⌘</div>
-          <div class="kc-key">K</div>
-        </div>
-        <span class="kc-label">Tap to Search Spotlight</span>
-        <span class="arrow" aria-hidden="true">↗</span>
-      </button>
-
-      <!-- 14. Apple News / Featured Story (1x1) -->
-      <a class="tile tile--news" id="projects" href="https://github.com/ikzaazabd/Arah" target="_blank" rel="noopener" aria-label="Featured Story: Arah ML Capstone">
-        <div>
-          <span class="nw-badge"> Featured Capstone</span>
-          <h2 class="nw-title">Arah: Machine Learning-Based Potential Test</h2>
-        </div>
-        <p class="nw-read">Leading cross-functional engineering from REST API to UX →</p>
-      </a>
 
     </div>
 
     <!-- Rearrange Layout Controls -->
     <div class="ra-controls">
       <button class="ra-edit-btn" type="button">
-        <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1.6"/><rect x="9" y="1.5" width="5.5" height="5.5" rx="1.6"/><rect x="1.5" y="9" width="5.5" height="5.5" rx="1.6"/><rect x="9" y="9" width="5.5" height="5.5" rx="1.6"/></svg>
+        <span class="sf-symbol " data-symbol="symbols-square-grid-2x2" aria-hidden="true"></span>
         Edit layout
       </button>
     </div>
@@ -619,9 +327,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-      © 2026 Ikzaaz Bakhtar Abdurrahman · <a href="https://ikzaazabd.site" style="text-decoration: underline; text-underline-offset: 3px;">ikzaazabd.site</a> · Crafted with Swift spirit at Apple Developer Academy @ Infinite Learning, Batam
-    </footer>
+    <footer class="footer">© 2026 · Ikzaaz Bakhtar Abdurrahman</footer>
   </main>
 
   <!-- Photo Booth Window Dialog -->
@@ -633,12 +339,13 @@
         <span class="pb-light pb-light--max"></span>
       </div>
       <span class="pb-title">Photo Booth</span>
-      <div style="width: 40px;"></div>
+
     </div>
 
     <div class="pb-stage">
       <video class="pb-video" playsinline muted></video>
       <canvas class="pb-canvas"></canvas>
+      <div class="pb-effects-grid" hidden aria-label="Choose a camera effect"></div>
       <div class="pb-flash" aria-hidden="true"></div>
       <div class="pb-countdown" hidden>3</div>
 
@@ -649,14 +356,11 @@
       </div>
     </div>
 
+    <div class="pb-tray"><p class="pb-tray-empty">Your photos will appear here. Click a photo to download.</p></div>
     <div class="pb-toolbar">
-      <button class="pb-effects-btn" type="button">Effect: Normal</button>
-      <button class="pb-shutter" type="button" aria-label="Snap Photo"></button>
-      <div style="width: 80px;"></div>
-    </div>
-
-    <div class="pb-tray">
-      <p class="pb-tray-empty">Your photos will appear here. Click to download.</p>
+      <span class="pb-mode" title="Single photo"><span class="sf-symbol" data-symbol="symbols-camera" aria-hidden="true"></span></span>
+      <button class="pb-shutter" type="button" aria-label="Snap Photo"><span class="sf-symbol" data-symbol="symbols-camera" aria-hidden="true"></span></button>
+      <button class="pb-effects-btn" type="button" aria-expanded="false">Effects</button>
     </div>
   </dialog>
 
@@ -664,7 +368,7 @@
   <div class="sl-overlay" aria-hidden="true">
     <div class="sl-window">
       <div class="sl-bar">
-        <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="2.5"/></svg>
+        <span class="sf-symbol " data-symbol="symbols-magnifyingglass" aria-hidden="true"></span>
         <input class="sl-input" type="text" placeholder="Search projects, stack, books, or actions (e.g. 42 * 7)..." autocomplete="off" spellcheck="false">
       </div>
       <div class="sl-results"></div>
@@ -679,30 +383,8 @@
     </div>
   </div>
 
-  <!-- macOS iMessage Notification Toast Banner -->
-  <aside class="im-toast" hidden aria-label="New Message from Ikzaaz">
-    <div class="im-header">
-      <div class="im-sender">
-        <div class="im-avatar">
-          <img src="./assets/avatar-photo.svg" alt="Ikzaaz">
-          <span class="im-badge"></span>
-        </div>
-        <span class="im-name">Ikzaaz Bakhtar</span>
-        <span class="im-time">now</span>
-      </div>
-      <button class="im-close" type="button" aria-label="Close notification">×</button>
-    </div>
-    <p class="im-body">Hey there! Welcome to my lifelong portfolio on ikzaazabd.site 👋 Feel free to test the interactive widgets or say hi!</p>
-    <div class="im-actions">
-      <button class="im-reply-btn" type="button">Reply</button>
-    </div>
-    <form class="im-compose" hidden>
-      <input class="im-input" type="text" placeholder="Type a reply to Ikzaaz..." aria-label="Reply to Ikzaaz">
-      <button class="im-send-btn" type="submit">Send</button>
-    </form>
-  </aside>
 
   <!-- Bootstrap Main Script -->
-  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/main.js?v=20261017-track"></script>
 </body>
 </html>

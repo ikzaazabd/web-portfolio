@@ -2,7 +2,7 @@
 // macOS App Switcher Dock Widget
 // ==========================================================
 
-import { playClick } from './audio.js';
+import { playClick } from './audio.js?v=20261017-track';
 
 export function initSwitcher() {
   const tile = document.querySelector('.tile--switcher');
@@ -42,18 +42,5 @@ export function initSwitcher() {
     });
   });
 
-  // Auto-play when idle
-  function startAuto() {
-    autoTimer = setInterval(() => {
-      if (document.hidden) return;
-      const next = (activeIndex + 1) % apps.length;
-      selectApp(next, false);
-    }, 4500);
-  }
-
-  tile.addEventListener('mouseenter', () => clearInterval(autoTimer));
-  tile.addEventListener('mouseleave', () => startAuto());
-
   selectApp(0, false);
-  startAuto();
 }

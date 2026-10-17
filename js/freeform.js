@@ -2,7 +2,7 @@
 // Apple Freeform Interactive Whiteboard Canvas
 // ==========================================================
 
-import { playClick } from './audio.js';
+import { playClick } from './audio.js?v=20261017-track';
 
 export function initFreeform() {
   const tile = document.querySelector('.tile--freeform');

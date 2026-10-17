@@ -2,7 +2,7 @@
 // Apple Calendar "Up Next" / Office Hours Widget
 // ==========================================================
 
-import { playClick, playChime } from './audio.js';
+import { playClick, playChime } from './audio.js?v=20261017-track';
 
 export function initOfficeHours() {
   const tile = document.querySelector('.tile--office');
@@ -43,7 +43,7 @@ export function initOfficeHours() {
           const subject = encodeURIComponent(`Coffee Chat / Discussion: ${dayStr}`);
           const body = encodeURIComponent(`Hi Ikzaaz,\n\nI visited ikzaazabd.site and would love to connect for a 30-minute chat regarding ${dayStr}.\n\nLooking forward to speaking with you!`);
           window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-          if (picker) picker.classList.remove('is-open');
+          if (picker) { picker.classList.remove('is-open'); picker.setAttribute('aria-hidden', 'true'); }
         });
         daysList.appendChild(btn);
         count++;
@@ -57,6 +57,8 @@ export function initOfficeHours() {
     if (picker && !picker.contains(e.target)) {
       playClick();
       picker.classList.add('is-open');
+      picker.setAttribute('aria-hidden', 'false');
+      picker.querySelector('button')?.focus();
     }
   });
 
@@ -64,7 +66,7 @@ export function initOfficeHours() {
     closeBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       playClick();
-      if (picker) picker.classList.remove('is-open');
+      if (picker) { picker.classList.remove('is-open'); picker.setAttribute('aria-hidden', 'true'); }
     });
   }
 }

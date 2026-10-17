@@ -1,62 +1,46 @@
-// ==========================================================
-// Apple Find My Map & Campus Tracker
-// ==========================================================
-
-export async function initFindMy() {
-  const tile = document.querySelector('.tile--findmy');
-  if (!tile) return;
-
-  const person = tile.querySelector('.fm-person');
-  const streetLabel = tile.querySelector('.fm-street');
-
-  let route = null;
-  try {
-    const res = await fetch('./assets/map/route.json');
-    if (res.ok) {
-      route = await res.json();
+// Fixed map around Nongsa Digital Park. Pin movement is decorative, not live location.
+export function initFindMy() {
+  const map = document.querySelector('.academy-map');
+  if (map) {
+    // Nongsa Digital Park coordinates from its official contact page.
+    const latitude = 1.185416;
+    const longitude = 104.101666;
+    const zoom = 16;
+    const count = 2 ** zoom;
+    const x = (longitude + 180) / 360 * count;
+    const radians = latitude * Math.PI / 180;
+    const y = (1 - Math.asinh(Math.tan(radians)) / Math.PI) / 2 * count;
+    for (let dy = -1; dy <= 1; dy++) {
+      for (let dx = -1; dx <= 1; dx++) {
+        const tileX = Math.floor(x) + dx;
+        const tileY = Math.floor(y) + dy;
+        const tile = document.createElement('img');
+        tile.src = `https://tile.openstreetmap.org/${zoom}/${tileX}/${tileY}.png`;
+        tile.alt = '';
+        tile.draggable = false;
+        tile.loading = 'lazy';
+        tile.style.left = `calc(50% + ${(tileX - x) * 256}px)`;
+        tile.style.top = `calc(44% + ${(tileY - y) * 256}px)`;
+        map.append(tile);
+      }
     }
-  } catch (e) {
-    console.warn('Could not load Find My route, using defaults.');
   }
-
-  if (!route) {
-    route = {
-      width: 800,
-      height: 800,
-      points: [[390, 470], [430, 470], [510, 450], [515, 300], [430, 290], [350, 290], [250, 310], [250, 460], [390, 470]],
-      streets: ["Academy Lab", "Design Studio", "Spatial Hub", "Coffee Commons", "Swift Workshop", "Academy Lab"]
-    };
+  const pin = document.querySelector('.tile--findmy .fm-person');
+  if (!pin) return;
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  let animation;
+  function update() {
+    animation?.cancel();
+    if (motion.matches) return;
+    animation = pin.animate([
+      { left: '49%', top: '44%' },
+      { left: '52%', top: '46%' },
+      { left: '55%', top: '43%' },
+      { left: '52%', top: '40%' },
+      { left: '48%', top: '41%' },
+      { left: '49%', top: '44%' }
+    ], { duration: 32000, iterations: Infinity, easing: 'linear' });
   }
-
-  const { points, streets } = route;
-  let progress = 0;
-  const speed = 0.003; // Smooth animation step
-
-  function animate() {
-    progress = (progress + speed) % (points.length - 1);
-    const index = Math.floor(progress);
-    const fraction = progress - index;
-
-    const p1 = points[index];
-    const p2 = points[index + 1];
-
-    if (p1 && p2 && person) {
-      const x = p1[0] + (p2[0] - p1[0]) * fraction;
-      const y = p1[1] + (p2[1] - p1[1]) * fraction;
-
-      const percentX = (x / route.width) * 100;
-      const percentY = (y / route.height) * 100;
-
-      person.style.left = `${percentX}%`;
-      person.style.top = `${percentY}%`;
-    }
-
-    if (streetLabel && streets[index]) {
-      streetLabel.textContent = streets[index];
-    }
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
+  motion.addEventListener('change', update);
+  update();
 }

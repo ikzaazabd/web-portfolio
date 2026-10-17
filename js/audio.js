@@ -149,7 +149,11 @@ export function playShutter() {
 }
 
 // Tactile Click for keyboard keycaps
+let lastClick = -Infinity;
 export function playClick() {
+  const timestamp = performance.now();
+  if (timestamp - lastClick < 70) return;
+  lastClick = timestamp;
   if (!soundEnabled) return;
   const ctx = getAudioContext();
   if (!ctx) return;
@@ -170,4 +174,14 @@ export function playClick() {
 
   osc.start(now);
   osc.stop(now + 0.03);
+}
+
+// Click covers mouse, touch activation, and keyboard activation without pointerdown duplicates.
+export function initInteractionSounds() {
+  document.addEventListener('click', event => {
+    if (event.target.closest('.sound-toggle, .tile--avatar, .pb-shutter')) return;
+    const control = event.target.closest('button, a[href], [role="button"], .tile--photos, .tile--office');
+    if (!control || control.disabled || control.getAttribute('aria-disabled') === 'true') return;
+    playClick();
+  });
 }
