@@ -1,5 +1,7 @@
 # Ikzaaz — Personal Portfolio
 
+Portfolio website as Product Manager.
+
 Portfolio website built with vanilla HTML, CSS, and JavaScript. It includes four static pages and interactive portfolio features, with no framework, package manager, or build step.
 
 ## Tech stack
